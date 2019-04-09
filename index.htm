@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="1.1.0" http-equiv="VERSION" />
+<meta content="04/09/2019" http-equiv="CREATEDATE" />
+<meta content="Claus Schiroky" http-equiv="AUTHOR" />
+<meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
+<meta content="Copyright ©2019 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
+
+<title>RMS Support Tool</title>
+
+<style type="text/css">
+.HeaderBackground {
+	background-color: #282828;
+	width: 100%;
+	color: #FFFFFF;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	height: 300px;
+}
+
+
+.Hyperlink {
+	background-color: transparent;
+	box-sizing: border-box;
+	color: rgb(3, 102, 214);
+	text-decoration: none;
+}
+.HeaderTitle {
+	font-size: 42px;
+}
+.HeaderSubtitle {
+	font-size: 18px;
+}
+.HeaderDescription {
+	font-size: 24px;
+}
+.Header1 {
+	border-bottom-color: rgb(234, 236, 239);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	box-sizing: border-box;
+	color: rgb(36, 41, 46);
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-size: 32px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	letter-spacing: normal;
+	line-height: 1.25;
+	margin-bottom: 16px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	orphans: 2;
+	padding-bottom: 0.3em;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none;
+	-webkit-text-stroke-width: 0px;
+	white-space: normal;
+	word-spacing: 0px;
+}
+.Header3 {
+	border-bottom-color: rgb(234, 236, 239);
+	box-sizing: border-box;
+	color: #000000;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-size: 1.25em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	letter-spacing: normal;
+	line-height: 1.25;
+	margin-bottom: 16px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	orphans: 2;
+	padding-bottom: 0.3em;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none;
+	white-space: normal;
+	word-spacing: 0px;
+}
+.ConsoleListShadow {
+	box-shadow: #f6f8fa;
+	padding: 2px 5px 2px 18px;
+	font-family: "Lucida Sans Typewriter";
+	font-size: 13px;
+	background-color: #f6f8fa;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.ConsoleTextShadow {
+	box-shadow: #DFDFDF;
+	padding: 3px 5px 3px 5px;
+	font-family: "Lucida Sans Typewriter";
+	font-size: 13px;
+	background-color: #f4f4f4;
+}
+.ConsoleListShadowTop {
+	box-shadow: #f6f8fa;
+	padding: 18px 5px 2px 18px;
+	font-family: "Lucida Sans Typewriter";
+	font-size: 13px;
+	background-color: #f6f8fa;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.ConsolteListShadowButton {
+	box-shadow: #f6f8fa;
+	padding: 2px 5px 18px 18px;
+	font-family: "Lucida Sans Typewriter";
+	font-size: 13px;
+	background-color: #f6f8fa;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.HeaderParagraphSpaceBefore {
+	border-bottom: 1px solid rgb(234, 236, 239);
+	box-sizing: border-box;
+	color: rgb(36, 41, 46);
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-size: 32px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	letter-spacing: normal;
+	line-height: 150%;
+	margin-bottom: 16px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 18px;
+	orphans: 2;
+	padding-bottom: 0.3em;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none;
+	-webkit-text-stroke-width: 0px;
+	white-space: normal;
+	word-spacing: 0px;
+}
+</style>
+
+<meta content="The RMS_Support_Tool provides the functionality to reset all Microsoft® AIP/AD RMS services. Its main purpose is to delete the currently downloaded policies and reset the user settings for AIP/AD RMS service, and it can also be used to collect data for troubleshooting." name="description" />
+
+</head>
+
+<body style="margin: 0">
+
+<div class="HeaderBackground">
+	<br />
+        <div style="border-style: solid; border-width: 0px 0px 0px 1px; border-color: lightgray; width:950px; margin:auto;background-color:#282828; padding-left:20px; padding-bottom:0px; padding-top:0px; padding-right:20px">
+
+            <div class="PageSize" style="width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12pt; height: 224px;">
+				
+				
+				<p>
+				<span class="HeaderTitle">RMS Support Tool</span><br />
+				<span class="HeaderSubtitle">
+				<span style='line-height:115%;
+  color:white;' class="auto-style7">Microsoft</span><span style='line-height:115%;
+  color:white;' class="auto-style10">©</span><span style='line-height:115%;
+  color:white;' class="auto-style7"> </span>
+				<span lang=EN-US style='line-height:115%;
+  color:white;' class="auto-style7">Customer Service &amp; Support EMEA<o:p></o:p></span></span></p>
+				<p>
+				<span class="HeaderDescription">The 'RMS Support Tool' provides the functionality to reset all Microsoft® 
+				AIP/AD RMS services. Its main purpose is to delete the currently 
+				downloaded policies and reset the user settings for AIP/AD RMS 
+				service, and it can also be used to collect data for 
+				troubleshooting.</span></p>
+
+
+            </div>
+        </div>
+</div>
+<p>
+&nbsp;</p>
+        <div style="width:950px; margin:auto;border:1px solid lightgray;-webkit-box-shadow: 10px 10px 20px 0px rgba(136,136,136,0.76);-moz-box-shadow: 10px 10px 20px 0px rgba(136,136,136,0.76);box-shadow: 10px 10px 20px 0px rgba(136,136,136,0.76);background-color:white;padding-left:20px;padding-bottom:20px;padding-top:20px;padding-right:20px">
+
+            <div class="PageSize" style="width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12pt;">
+				
+				
+				<p class="Header1">
+				Introduction<img src="data:image/png;base64,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" 
+width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right"></p>
+				<p>
+				This information gives you background and usage information for 
+				the
+				<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Latest" style="background-color: transparent; box-sizing: border-box; color: rgb(3, 102, 214); text-decoration: none;" target="_blank">
+				RMS_Support_Tool</a> Microsoft® Windows® PowerShell script 
+				module.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li><strong>Please only run RMS_Support_Tool if you 
+					have been prompted to do so by a Microsoft® support 
+					technician.</strong></li>
+					<li><strong>It is recommended to test the RMS_Support_Tool with a 
+					test environment before executing it in a live 
+					environment.</strong></li>
+					<li><strong>Do not modify any component of the 
+					RMS_Support_Tool in any kind, as this 
+					will result in incorrect information in the analysis of your 
+					environment.</strong></li>
+					<li>There is no support for the RMS_Support_Tool. Please see the 
+					disclaimer below.</li>
+					<li>Nomenclature:
+					<ul>
+						<li>RMS = <strong>R</strong>ights <strong>M</strong>anagement
+						<strong>S</strong>ervice.</li>
+						<li>AD RMS = <strong>A</strong>ctive <strong>D</strong>irectory
+						<strong>R</strong>ights <strong>M</strong>anagement
+						<strong>S</strong>ervice.</li>
+						<li>AIP = <strong>A</strong>zure <strong>I</strong>nformation
+						<strong>P</strong>rotection.</li>
+						<li>MSIP/MIP = <strong>M</strong>icrosoft® <strong>I</strong>nformation
+						<strong>P</strong>rotection</li>
+						<li>MSIPC = <strong>M</strong>icrosoft® <strong>I</strong>nformation
+						<strong>P</strong>rotection <strong>C</strong>lient.</li>
+						<li>DRM = <strong>D</strong>igital <strong>R</strong>ights
+						<strong>M</strong>anagement</li>
+						<li>AADRM = <strong>A</strong>zure <strong>A</strong>ctive
+						<strong>D</strong>irectory <strong>R</strong>ights
+						<strong>M</strong>anagement</li>
+					</ul>
+					</li>
+				</ul>
+				<p class="Header1">
+				MIT
+				License</p>
+				<p>
+				Permission is hereby granted, free of charge, to any person 
+				obtaining a copy of this software and associated documentation 
+				files (the "Software"), to deal in the Software without 
+				restriction, including without limitation the rights to use, 
+				copy, modify, merge, publish, distribute, sublicense, and/or 
+				sell copies of the Software, and to permit persons to whom the 
+				Software is furnished to do so, subject to the following 
+				conditions:</p>
+				<p>
+				<strong>
+				DISCLAIMER OF WARRANTY: THE SOFTWARE IS PROVIDED "AS IS", 
+				WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 
+				NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+				PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR 
+				OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+				OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+				SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. PLEASE DO 
+				UNDERSTAND THAT THERE IS NO GUARANTEE THAT THIS SOFTWARE WILL RUN 
+				WITH ANY GIVEN ENVIRONMENT OR CONFIGURATION. BY INSTALLING AND 
+				USING THE SOFTWARE YOU ACCEPT THIS DISCLAIMER OF WARRANTY. 
+				IF YOU DO NOT ACCEPT THE TERMS, DO NOT INSTALL OR USE THIS 
+				SOFTWARE.</strong></p>
+				<p class="Header1">
+				Requirements</p>
+				<p>Before you can use the RMS_Support_Tool make sure that your 
+				environment fulfils the following requierements. Please update 
+				your environment if necessary.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>The RMS_Support_Tool supports the following operating systems:
+					<ul>
+						<li>Microsoft® Windows® 7, Windows® 8, Windows® 8.1, 
+						Windows® 10, Windows® Server 2008, Windows® Server 2008 
+						R2, Windows® Server 2012, Windows® Server 2012 R2, 
+						Windows® Server 2016 and Windows® Server 2019.</li>
+					</ul>
+					</li>
+					<li>The RMS_Support_Tool supports the following Microsoft® Office 
+					versions:<ul>
+						<li>Microsoft® Office 2010, Microsoft® Office 2013, 
+						Microsoft® Office 2016, Microsoft® Office 2019, and 
+						Microsoft® Office 365.</li>
+					</ul>
+					</li>
+				</ul>
+				
+				<p class="Header3">1. Microsoft® Azure Information Protection cmdlets (optional)</p>
+								
+				<p>The Microsoft® Azure Information Protection cmdlets are 
+				installed with the
+				<a class="Hyperlink" href="https://www.microsoft.com/en-us/download/details.aspx?id=53018" style="background-color: transparent; box-sizing: border-box; color: rgb(3, 102, 214); text-decoration: none;" target="_blank">
+				Azure Information Protection client</a>. Please ensure to have 
+				the latest version of the "AzureInformationProtection" cmdlets installed by checking its
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-version-release-history" style="background-color: transparent; box-sizing: border-box; color: rgb(3, 102, 214); text-decoration: none;" target="_blank">
+				client version release history</a>.</p>
+				<p>Currently, if you install the cmdlets as one user and run the 
+				cmdlets on the same computer as another user, you must first run 
+				the following command with administrative permissions in a 
+				Windows® PowerShell command window:</p>
+				<p><span class="ConsoleTextShadow">PS C:\&gt; Import-Module 
+				AzureInformationProtection</span></p>
+				<p class="Header3">2. Microsoft® Windows® 10 (recommended)</p>
+				<p>The RMS_Support_Tool offer functionality to reset all Microsoft® AIP/AD 
+				RMS services. While doing so, possible custom configurations will 
+				be backed up for you. The corresponding backup file 
+				(ServiceLocationBackup.reg) or its content can exceed the 
+				default path length of 260 characters and with that, backup or 
+				restore of custom configurations will fail. Other files may also 
+				be affected.</p>
+				<p>To prevent you from running into potential issues, it’s 
+				recommended to use the RMS_Support_Tool on a Microsoft® Windows® 10, 
+				version 1607 (or higher), or Windows® Server 2016 (or higher) 
+				operating system.</p>
+				<p><strong>IMPORTANT: If you are using a different Microsoft® Windows® 
+				operating system, you must back up the following registry key 
+				manually:</strong></p>
+				<p><span class="ConsoleTextShadow">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation]</span></p>
+				<p>To use cmdlets with path lengths greater than 260 characters, 
+				run the Windows® Policy editor (gpedit.msc) and set the 
+				following group policy setting that is available only on the 
+				given operating systems:</p>
+				<p><em>Local Computer Policy &gt; Computer Configuration &gt; 
+				Administrative Templates &gt; System &gt; FileSystem &gt; Enable Win32 
+				long paths</em></p>
+				<p>For Windows® Server 2016 (and 2019), you must first install the latest
+				<a class="Hyperlink" href="https://www.microsoft.com/en-us/download/details.aspx?id=48257" style="background-color: transparent; box-sizing: border-box; color: rgb(3, 102, 214); text-decoration: none;" target="_blank">
+				Administrative Templates (.admx) for Windows® 10</a> before you 
+				can apply this policy.</p>
+				<p>For more information, see
+				<a class="Hyperlink" href="https://docs.microsoft.com/de-de/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation" target="_blank">the Maximum Path Length Limitation section from the Windows® 10 
+				developer documentation</a>.</p>
+				<p class="Header3">3. Internet access (required)</p>
+				<p>The RMS_Support_Tool consumes the following sources from the internet:</p>
+				<p>For logging and tracing purposes, the tool DebugView from 
+				Windows® Sysinternals is required. If you call the help file, the 
+				RMS_Support_Tool downloads its help file 
+				(RmsSupportTool.htm), and to check for updates, it downloads a 
+				file as well (Update.dat).</p>
+				<p>If you do not have the corresponding files on your local hard 
+				drive, the RMS_Support_Tool will automatically try to download the 
+				following files from the internet:</p>
+				<ul>
+					<li>
+					<a class="Hyperlink" href="https://download.sysinternals.com/files/DebugView.zip">
+					DebugView v4.81</a></li>
+					<li>
+					<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Help">
+					Rms_Support_Tool.htm</a></li>
+					<li>
+					<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Update">Update.dat</a></li>
+				</ul>
+				<p><em>Note:</em></p>
+				<ul>
+					<li><strong>If you’re using the RMS_Support_Tool in an environment 
+					that does not have internet access, you must download the 
+					files manually, before proceeding the RMS_Support_Tool.</strong></li>
+					<li>You must place the files to the location where you have 
+					stored the RMS_Support_Tool files, and DebugView must be uncompressed 
+					into the subfolder “DebugView”.</li>
+				</ul>
+				<p class="Header1">
+				Installation</p>
+				<p class="Header3">RMS_Support_Tool</p>
+				<p>To install the RMS_Support_Tool, you must copy 
+				all its files (RmsSupporTool.psm1, RmsSupportTool.psd1, and 
+				RmsSupportTool.htm) to the following directory:</p>
+				<p><span class="ConsoleTextShadow">
+				%ProgramFiles%\WindowsPowerShell\Modules\RmsSupportTool</span></p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>This path must be listed in the PSModulePath environment 
+					variable. For more information, please see the following 
+					information:
+					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/developer/module/modifying-the-psmodulepath-installation-path#to-view-the-psmodulepath-variable" rel="nofollow" target="_blank">
+					To view the PSModulePath variable</a>.</li>
+				</ul>
+				<p class="Header3">Sysinternals DebugView</p>
+				<p><strong>IMPORTANT: If you're working in an environment that does not have 
+				internet access, in addition you must copy all files of the 
+				DebugView tool from Windows® Sysinternals (Dbgview.exe, 
+				dbgview.chm, and Eula.txt) into the following directory:</strong></p>
+				<p><span class="ConsoleTextShadow">
+				%ProgramFiles%\WindowsPowerShell\Modules\RmsSupportTool\DebugView</span></p>
+				<p class="Header3">Check installation</p>
+				<p>To check if the installation was successful, you can call the 
+				Get-Module cmdlet with the following parameter:</p>
+				<p><span class="ConsoleTextShadow">PS C:\&gt; Get-Module -ListAvailable</span></p>
+				<p>If you find an entry like the following, the installation was 
+				successful:</p>
+				<p class="ConsoleListShadowTop">PS C:\&gt; 
+				Get-Module -ListAvailable</p>
+				<p class="ConsoleListShadow">&nbsp;</p>
+				<p class="ConsoleListShadow">&nbsp;&nbsp;&nbsp; Directory: 
+				C:\Program Files\WindowsPowerShell\Modules</p>
+				<p class="ConsoleListShadow">&nbsp;</p>
+				<p class="ConsoleListShadow">ModuleType Version&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				ExportedCommands</p>
+				<p class="ConsoleListShadow">---------- -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				----------------</p>
+				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp; 
+				1.1.0&nbsp;&nbsp;&nbsp;&nbsp; RmsSupportTool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				RMS_Support_Tool</p>
+				<p class="HeaderParagraphSpaceBefore">
+				Usage</p>
+				<p>You must run the RMS_Support_Tool with administrative permissions,
+				<span style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+				either in a Windows® PowerShell command window or in Windows® 
+				PowerShell ISE</span>. To do this, click 
+				the Microsoft® Windows® START button and start typing "power". 
+				While you type, you'll see suggestion "Windows PowerShell" 
+				(Desktop app). Right-click this entry. In the context menu, 
+				select "Run as administrator".</p>
+				<p>By default, running PowerShell scripts is disabled, and you 
+				must bypass this restriction in order to be able to run the 
+				RMS_Support_Tool. To do this, run the "Set-ExecutionPolicy"-command with 
+				the following parameters:</p>
+				<p><span class="ConsoleTextShadow">PS C:\&gt; Set-ExecutionPolicy -Scope CurrentUser 
+				-ExecutionPolicy RemoteSigned -Force</span></p>
+				<p><em>Know issues:</em></p>
+				<ul>
+					<li><strong>Set-ExecutionPolicy has no effect</strong>. If 
+					you downloaded the RMS_Support_Tool from an untrusted website, it will 
+					be extended by an
+					<a class="Hyperlink" href="https://blogs.technet.microsoft.com/askcore/2013/03/24/alternate-data-streams-in-ntfs" rel="nofollow" target="_blank">Alternate Data Streams in NTFS</a> (ADS). If the 
+					corresponding website in the ADS is not trusted in your 
+					environment, the PowerShell command "Set-ExecutionPolicy" 
+					has no effect. There're two methods to solve this issue: 
+					Either you right-click the downloaded script file and 
+					"Unblock" it, or you add the correcponding website to your 
+					trusted sites settings in Internet Explorer.</li>
+					<li><strong>Script does not start with the error: 
+					Set-ExecutionPolicy : PowerShell updated your local 
+					preference successfully, but the setting is overridden by 
+					the group policy applied to your system </strong>or<strong> 
+					Set-ExecutionPolicy : Windows PowerShell updated your 
+					execution policy successfully, but the setting is overridden 
+					by a policy defined at a more specific scope.</strong>. If 
+					you see this message in a PowerShell command window, you are 
+					most likely affected by the Windows® Group Policy setting "Turn on 
+					Script Execution". To resolve this problem, you must remove 
+					this Group Policy setting or configure a setting that allows 
+					scripts to run. Please request assistance from your 
+					administrator to do this. Please also read
+					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-5.1#use-group-policy-to-manage-execution-policy" rel="nofollow" target="_blank">Use Group Policy to Manage Execution Policy</a> and
+					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-5.1" target="_blank">
+					Set-ExecutionPolicy</a>.</li>
+				</ul>
+				<p>To start the RMS_Support_Tool, simply type 
+				"RMS_Support_Tool" into the PowerShell command window, and press 
+				enter. For example:</p>
+				<p style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+				<span class="ConsoleTextShadow" style="padding: 3px 5px; font-family: &quot;Lucida Sans Typewriter&quot;; font-size: 13px; background-color: rgb(244, 244, 244);">
+				PS C:\&gt; RMS_Support_Tool</span></p>
+				<p>When you start the RMS_Support_Tool, you'll see the following default 
+				menu:</p>
+				<p class="ConsoleListShadowTop">
+
+   &nbsp;
+
+   [1] INFORMATION</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp;  [2] DISCLAIMER</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [3] HELP</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [4] RESET</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [5] USER LOGGING</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [6] ADMIN LOGGING</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [7] COMPRESS LOGS</p>
+				<p class="ConsoleListShadow">
+
+   &nbsp; [8] EXIT MENU</p>
+				<p class="ConsoleListShadow">
+
+   			 &nbsp;</p>
+				<p class="ConsolteListShadowButton">
+
+   			 Please select an option and press enter:</p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				You can also start the RMS_Support_Tool within the command-line. 
+				Use the following command-line parameter to see a short summary 
+				of all available command-line parameters:</p>
+				<p style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+				<span class="ConsoleTextShadow" style="padding: 3px 5px; font-family: &quot;Lucida Sans Typewriter&quot;; font-size: 13px; background-color: rgb(244, 244, 244);">
+				PS C:\&gt; RMS_Support_Tool -Information</span></p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				To see a full list of all command-line parameters with 
+				description, run the following command:</p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				<span class="ConsoleTextShadow">Get-Help RMS_Support_Tool 
+				-Detailed</span></p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;" class="HeaderParagraphSpaceBefore">
+				User experience</p>
+				<p>RMS_Support_Tool provides the following features (menu entry 
+				/ command-line parameter):<p class="Header3">[1] INFORMATION / 
+				-Information</p>
+				<p>This shows syntax and a description.</p>
+				<p><span class="Header3">[2] DISCLAIMER / -Disclaimer</span></p>
+				<p>This displays the disclaimer of warranty.<br />
+				Please read it carefully, and act accordingly.</p>
+				<p><span class="Header3">[3] HELP / -Help</span></p>
+				<p>This opens the help file (RmsSupportTool.htm).</p>
+				<p><span class="Header3">[4] RESET / -Reset</span></p>
+				<p><strong>IMPORTANT: Before you proceed with this option, close all 
+					applications that run or use Microsoft® Office or AIP/AD 
+					RMS.</strong></p>
+				<p>This option removes all AIP/AD RMS certificates, policy 
+				templates and all corresponding registry keys. Before, the 
+				RMS_Support_Tool creates a backup copy of existing custom configurations 
+				from the following registry key:</p>
+				<p><span class="ConsoleTextShadow">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation]</span></p>
+				<p>The name of the backup file is “ServiceLocationBackup.reg”.</p>
+				<p><strong>IMPORTANT: Please review point 2 in the prerequisites 
+				section of this help file for additional information.</strong></p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>When an Office 2013 installation is detected,
+					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/office365/admin/security-and-compliance/enable-modern-authentication?redirectSourcePath=%252farticle%252f7dc1c01a-090f-4971-9677-f1b192d6c910&amp;view=o365-worldwide" rel="nofollow" target="_blank">modern authentication (ADAL)</a> is automatically enabled as 
+					a precaution.</li>
+				</ul>
+				<p>
+				<span class="Header3">[5] USER LOGGING / -UserLogging</span></p>
+				<p><strong>IMPORTANT: Close all applications that run or use Microsoft® Office 
+					or AIP/AD RMS before you proceed with this option.</strong></p>
+				<p>In a first step, this parameter activates the required 
+				logging, tracing or debugging mechanisms by implementing 
+				registry settings, and enabling some Windows event logs. This 
+				process will be reflected by a progress bar “Enable logging...".</p>
+				<p>In a second step asks you to reproduce the problem. While 
+				you’re doing so, the RMS_Support_Tool collects and records data. 
+				Once you have reproduced the problem, all collected files will 
+				be stored into the default logs folder 
+				(%temp%\RMS_Support_Tool\Logs). Every time you call this option, 
+				a new unique subfolder will be created in the logs-folder that 
+				reflects the date and time when it was created, e.g. 
+				“190221-133005”. While the files are being cached, you will see 
+				a progress bar “Collecting logs...".</p>
+				<p>In the last step, the RMS_Support_Tool resets all activated log, 
+				trace, and debug settings to their defaults. This process will 
+				be reflected by a progress bar “Disable logging...".</p>
+				<p>You can then review the log files in the logs folder.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>An additional tool from Windows® Sysinternals (<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">DebugView</a>) 
+					is required for logging.</li>
+					<li>If you do not have this tool on your local hard drive, 
+					it will be automatically downloaded from the internet.</li>
+				</ul>
+				<p class="Header3">
+				[6] ADMIN LOGGING / -AdminLogging</p>
+				<p>This parameter collects only AADRM configuration information 
+				of your tenant.<br />
+				Please request assistance from your administrator to proceed 
+				this option.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>You need to know your Microsoft® Office 365 global administrator 
+					account information to proceed with this option, as you will 
+					be asked for your credentials.</li>
+					<li>An additional tool from Windows® Sysinternals (<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">DebugView</a>) 
+					is required for logging.</li>
+					<li>If you do not have this tool on your local hard drive, 
+					it will be automatically downloaded from the internet.</li>
+				</ul>
+				<p class="Header3">[7] COMPRESS LOGS / -CompressLogs True</p>
+				<p>
+				<strong>IMPORTANT: This command-line parameter should always be 
+				used at the very end of a scenario. Otherwise the compressed 
+				.zip file will not be created.</strong></p>
+				<p>
+				This parameter compress all collected logs files into a .zip 
+				file, and the corresponding path and file name is displayed.<br />
+				In addition, the default logs folder 
+				(%temp%\RMS_Support_Tool\Logs) will be cleaned.<br />
+				After this step you can review the log files, and send the 
+				collected logs to Microsoft® support technician.</p>
+				<p>
+				<span class="Header3">[8] EXIT / -</span></p>
+				<p>This option will asks you whether you want to exit the menu after a confirmation prompt.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>This option is not available in the command-line.</li>
+				</ul>
+				<p class="Header3">- / -Menu</p>
+				<p>This will start the RMS_Support_Tool with the default menu.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>This option is not available in the menu.</li>
+				</ul>
+				<p class="Header3">- / -Version</p>
+				<p>This parameter displays the version of the RMS_Support_Tool, and 
+				offers a hyperlink to check for the
+				<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Latest" rel="nofollow" target="_blank">
+				latest version</a> of the RMS_Support_Tool.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>This option is not available in the menu.</li>
+				</ul>
+				<p class="Header1">
+				Script log file</p>
+				<p>The RMS_Support_Tool creates the following log file. The log file 
+				give an overview about the commands that were run and offers a 
+				control mechanism to review the results.</p>
+				<p class="Header3">Script.log</p>
+				<p>This log file collects the actions that has been taken and 
+				lists the results. It also logs general environment information 
+				from the used client machine, like the Windows® edition or 
+				Windows® PowerShell version.</p>
+				<p class="Header1">
+				Recorded log files</p>
+				<p>The RMS_Support_Tool collects the following log files and folders. If 
+				you want to learn more about the method used to collect a log or 
+				folder, please review the source code of the RMS_Support_Tool script 
+				module and read the 
+				comments.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>Please note that not all log files are collected or 
+					recorded at all times. It depends on your environment which 
+					logs, or traces can be recorded.</li>
+				</ul>
+				<p class="Header3">AadrmConfiguration.log</p>
+				<p>This file is only collected if you selected 
+				<span class="ConsoleTextShadow">[6] ADMIN LOGGING</span>. The file contains the Rights Management 
+				configuration of your tenant. For more information, please see 
+				the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps" rel="nofollow" target="_blank">Get-AadrmConfiguration</a>.</p>
+				<p class="Header3">Tasklist.log</p>
+				<p>This file contains a list of currently running processes on 
+				the local computer. For more information, please see the 
+				following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist" rel="nofollow" target="_blank">tasklist</a>.</p>
+				<p class="Header3">WinIPConfig.txt and IPConfigAll.log</p>
+				<p>These files show all current TCP/IP network configuration 
+				settings. For more information, please see the following 
+				documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig" rel="nofollow" target="_blank">ipconfig</a>.</p>
+				<p class="Header3">NetMon.etl</p>
+				<p>This file is a network trace recorded by Netsh.exe. For more 
+				information, please see the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts" rel="nofollow" target="_blank">Netsh Command Syntax, Contexts, and Formatting</a>.</p>
+				<p class="Header3">ProblemSteps.zip</p>
+				<p>This file records the exact steps you took when the problem 
+				occured. It was created by the Steps Recorder (psr.exe). For 
+				more information, please see the following documentation:
+				<a class="Hyperlink" href="https://support.microsoft.com/en-us/help/22878/windows-10-record-steps" rel="nofollow" target="_blank">Record steps to reproduce a problem</a>.</p>
+				<p class="Header3">MSIPC-MSDRM-DebugView.log</p>
+				<p>This file contains debug output for all MSIPC- or 
+				MSDRM-clients on your local system. It was created by 
+				DebugView.exe. For more information, please see the following 
+				documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">DebugView v4.81</a>.</p>
+				<p class="Header3">MSIP/MSIPC/DRM logs</p>
+				<p>The following log folders contain more MSIP/MSIPC/DRM logging 
+				information:</p>
+				<p class="ConsoleListShadowTop">%LOCALAPPDATA%\Microsoft\MSIP</p>
+				<p class="ConsoleListShadow">%LOCALAPPDATA%\Microsoft\MSIPC</p>
+				<p class="ConsolteListShadowButton">%LOCALAPPDATA%\Microsoft\DRM</p>
+				<p>For more information, please see the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/develop/debugging-applications-that-use-ad-rms" rel="nofollow" target="_blank">How-to: debug a rights-enabled application</a>.</p>
+				<p class="Header3">.cer-files (.ce_)</p>
+				<p>These files are exported website certificate URLs that were 
+				taken from this registry key:</p>
+				<p><span class="ConsoleTextShadow">[HKCU:\Software\Classes\Local 
+				Settings\Software\Microsoft\MSIPC]</span></p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>The files are exported with the file extension .ce_ 
+					instead of .cer, since some security programs can 
+					block these files.</li>
+				</ul>
+				<p class="Header3">CAPI2.evtx</p>
+				<p>This file is the CAPI2 Windows® Event Log. For more 
+				information, please see the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows/desktop/WES/saving-events-to-a-log-file" rel="nofollow" target="_blank">Saving Events to a Log File</a>.</p>
+				<p class="Header3">AIP.evtx</p>
+				<p>This file is the Azure Information Protection Windows® Event 
+				Log.</p>
+				<p class="Header3">Application.evtx</p>
+				<p>This file is the Application Windows® Event Log.</p>
+				<p class="Header3">System.evtx</p>
+				<p>This file is the System Windows® Event Log.</p>
+				<p class="Header3">office.log</p>
+				<p>This file is the Office TCOTrace log.</p>
+				<p class="Header3">Office logging</p>
+				<p>All Office log files are collected from the following Office 
+				MsoLogs folder:</p>
+				<p><span class="ConsoleTextShadow">C:\Users\&lt;username&gt;\AppData\Local\Microsoft\Office\MsoLogs</span></p>
+				<p>For more information, please see the following documentation:
+				<a class="Hyperlink" href="https://social.msdn.microsoft.com/Forums/en-US/0ddbde66-fd90-40aa-b6ca-892fc0817874/how-to-enable-verbose-logging-on-client-side" rel="nofollow" target="_blank">How to enable verbose logging on client side</a>.</p>
+				<p class="Header3">MSOIdentityCRL trace</p>
+				<p>Microsoft Online Services Sign-in Assistant (MOS SIA) trace, 
+				and logs from MSOTrace-, and MSOTraceLite-folders. For more 
+				information, please see the following documentation:
+				<a class="Hyperlink" href="https://support.microsoft.com/en-us/help/2433327/how-to-enable-and-disable-a-trace-for-the-microsoft-online-services-si" rel="nofollow" target="_blank">How to enable and disable a trace for the Microsoft Online 
+				Services Sign-in Assistant</a>.</p>
+				<p class="Header3">WinHTTP.log and WinHTTP_WoW6432.log</p>
+				<p>These files contain the WinHTTP proxy configuration and are 
+				collected with Netsh.exe. For more information, please see the 
+				following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts" rel="nofollow" target="_blank">Netsh Command Syntax, Contexts, and Formatting</a>.</p>
+				<p class="Header3">CertMachine.log and CertUser.log</p>
+				<p>These files contain certification information and were 
+				collected with Certutil.exe. For more information, please see 
+				the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil" rel="nofollow" target="_blank">certutil</a>.</p>
+				<p class="Header3">EnvVar.log</p>
+				<p>This file contains environment variables information from the 
+				system ("Get-ChildItem Env:"). For more information about this 
+				PowerShell command, please see the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-5.1" rel="nofollow" target="_blank">Get-ChildItem</a>.</p>
+				<p class="Header3">Programs32.log</p>
+				<p>These files contains the installed software (32-bit) from the 
+				system. This file were taken from this registry key:</p>
+				<p><span class="ConsoleTextShadow">
+				HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</span></p>
+				<p class="Header3">Programs64.log</p>
+				<p>These files contains the installed software (64-bit) from the 
+				system. This file were taken from this registry key:</p>
+				<p><span class="ConsoleTextShadow">
+				HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall</span></p>
+				<p class="Header3">Gpresult.htm</p>
+				<p>This file contains the Resultant Set of Policy (RSoP) 
+				information from the system. For more information, please see 
+				the following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult" rel="nofollow" target="_blank">gpresult</a>.</p>
+				<p class="Header3">BaseUTCOffset.log</p>
+				<p>This file contains time zone offset information. For more 
+				information about this PowerShell command, please see the 
+				following documentation:
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-timezone?view=powershell-5.1" rel="nofollow" target="_blank">Get-TimeZone</a>.</p>
+				<p>&nbsp;</p>
+
+
+            </div>
+        </div>
+<p>&nbsp;</p>
+
+<div class="HeaderBackground" style="height: 135px">
+	<br />
+        <div style="border-left: 1px solid lightgray; border-right: 0px solid lightgray; border-top: 0px solid lightgray; border-bottom: 0px solid lightgray; padding: 0px 20px; width:950px; margin:auto; background-color:#282828; height: 48px;">
+
+            <div class="PageSize" style="width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12pt; height: 61px;">
+				
+				
+				<p>
+				RMS_Support_Tool is maintained by 				
+				<a href="https://github.com/schiroky" style="border-style: none; border-color: currentColor; border-width: 0px; margin: 0px; padding: 0px; border-image: url('none') 100% 1 0 stretch; color: rgb(242, 242, 242); font-family: inherit; font-size-adjust: none; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; text-decoration: underline; text-shadow: none; transition-delay: 0s; transition-duration: 0.5s; transition-property: text-shadow; transition-timing-function: ease; vertical-align: baseline;" target="_blank">Claus Schiroky</a>,
+				<span class="auto-style7">Microsof</span>t® C<span>ustomer 
+				Service &amp; Support EMEA.</span><span lang=EN-US style='line-height:115%;
+  color:white;' class="auto-style7"><br />
+				</span>
+				<span style='line-height:115%;
+  color:white;' class="auto-style7">Copyright ©2019 Microsoft</span><span style='line-height:115%;
+  color:white;' class="auto-style10">®. All rights reserved.</span></p>
+
+
+            </div>
+        </div>
+</div>
+
+</body>
+
+</html>
