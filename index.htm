@@ -6,7 +6,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="1.1.0" http-equiv="VERSION" />
-<meta content="04/11/2019" http-equiv="CREATEDATE" />
+<meta content="04/12/2019" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
 <meta content="Copyright ©2019 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
@@ -177,7 +177,7 @@
   color:white;' class="auto-style7">Customer Service &amp; Support EMEA<o:p></o:p></span></span></p>
 				<p>
 				<span class="HeaderDescription">The 'RMS Support Tool' provides the functionality to reset all Microsoft® 
-				AIP/AD RMS services. Its main purpose is to delete the currently 
+				AIP/AD RMS client services. Its main purpose is to delete the currently 
 				downloaded policies and reset the user settings for AIP/AD RMS 
 				service, and it can also be used to collect data for 
 				troubleshooting.</span></p>
@@ -337,7 +337,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>For logging and tracing purposes, the tool DebugView from 
 				Windows® Sysinternals is required. If you call the help file, the 
 				RMS_Support_Tool downloads its help file 
-				(RmsSupportTool.htm), and to check for updates, it downloads a 
+				(RMS_Support_Tool.htm), and to check for updates, it downloads a 
 				file as well (Update.dat).</p>
 				<p>If you do not have the corresponding files on your local hard 
 				drive, the RMS_Support_Tool will automatically try to download the 
@@ -348,7 +348,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					DebugView v4.81</a></li>
 					<li>
 					<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Help">
-					Rms_Support_Tool.htm</a></li>
+					RMS_Support_Tool.htm</a></li>
 					<li>
 					<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Update">Update.dat</a></li>
 				</ul>
@@ -365,17 +365,16 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Installation</p>
 				<p class="Header3">RMS_Support_Tool</p>
 				<p>To install the RMS_Support_Tool, you must copy 
-				all its files (RmsSupporTool.psm1, RmsSupportTool.psd1, and 
-				RmsSupportTool.htm) to the following directory:</p>
+				all its files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and 
+				RMS_Support_Tool.htm) to the following directory:</p>
 				<p><span class="ConsoleTextShadow">
-				%ProgramFiles%\WindowsPowerShell\Modules\RmsSupportTool</span></p>
+				%ProgramFiles%\WindowsPowerShell\Modules\RMS_Support_Tool</span></p>
 				<p><em>Note:</em></p>
 				<ul>
 					<li>This path must be listed in the PSModulePath environment 
-					variable. For more information, please see the following 
-					information:
+					variable. For more information, please read how
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/developer/module/modifying-the-psmodulepath-installation-path#to-view-the-psmodulepath-variable" rel="nofollow" target="_blank">
-					To view the PSModulePath variable</a>.</li>
+					to view the PSModulePath variable</a>.</li>
 				</ul>
 				<p class="Header3">Sysinternals DebugView</p>
 				<p><strong>IMPORTANT: If you're working in an environment that does not have 
@@ -383,7 +382,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				DebugView tool from Windows® Sysinternals (Dbgview.exe, 
 				dbgview.chm, and Eula.txt) into the following directory:</strong></p>
 				<p><span class="ConsoleTextShadow">
-				%ProgramFiles%\WindowsPowerShell\Modules\RmsSupportTool\DebugView</span></p>
+				%ProgramFiles%\WindowsPowerShell\Modules\RMS_Support_Tool\DebugView</span></p>
 				<p class="Header3">Check installation</p>
 				<p>To check if the installation was successful, you can call the 
 				Get-Module cmdlet with the following parameter:</p>
@@ -401,12 +400,12 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">---------- -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------------</p>
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp; 
-				1.1.0&nbsp;&nbsp;&nbsp;&nbsp; RmsSupportTool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1.1.0&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
 				<p class="HeaderParagraphSpaceBefore">
 				Usage</p>
 				<p>You must run the RMS_Support_Tool with administrative permissions,
-				<span style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+				<span style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
 				either in a Windows® PowerShell command window or in Windows® 
 				PowerShell ISE</span>. To do this, click 
 				the Microsoft® Windows® START button and start typing "power". 
@@ -501,6 +500,12 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
 				<span class="ConsoleTextShadow">Get-Help RMS_Support_Tool 
 				-Detailed</span></p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				To see the help for a single command-line parameter, for example 
+				for "-CompressLogs", run the following command:</p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				<span class="ConsoleTextShadow">Get-Help RMS_Support_Tool 
+				-Parameter CompressLogs</span></p>
 				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;" class="HeaderParagraphSpaceBefore">
 				User experience</p>
 				<p>RMS_Support_Tool provides the following features (menu entry 
@@ -511,7 +516,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>This displays the disclaimer of warranty.<br />
 				Please read it carefully, and act accordingly.</p>
 				<p><span class="Header3">[3] HELP / -Help</span></p>
-				<p>This opens the help file (RmsSupportTool.htm).</p>
+				<p>This opens the help file (RMS_Support_Tool.htm).</p>
 				<p><span class="Header3">[4] RESET / -Reset</span></p>
 				<p><strong>IMPORTANT: Before you proceed with this option, close all 
 					applications that run or use Microsoft® Office or AIP/AD 
@@ -732,8 +737,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p><span class="ConsoleTextShadow">
 				[HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall]</span></p>
 				<p class="Header3">Registry.log</p>
-				<p>This file contains several regsitry keys related to AIP the 
-				configuration. The content were taken from these registry keys:</p>
+				<p>This file contains several regsitry keys related to the AIP configuration. The content were taken from these registry keys:</p>
 				<p class="ConsoleListShadowTop">
 				[HKLM:\Software\Classes\MSIP.ExcelAddin]</p>
 				<p class="ConsoleListShadow">
@@ -780,6 +784,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				[HKCU:\Software\Microsoft\Office\16.0\Common\DRM]</p>
 				<p class="ConsoleListShadow">
 				[HKCU:\Software\Microsoft\Office\16.0\Common\Security]</p>
+				<p class="ConsoleListShadow">
+				[HKCU:\Software\Microsoft\Office\16.0\Common\Identity]</p>
 				<p class="ConsoleListShadow">
 				[HKCU:\Software\Microsoft\Office\Word\Addins]</p>
 				<p class="ConsoleListShadow">
