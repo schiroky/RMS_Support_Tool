@@ -6,7 +6,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="1.1.0" http-equiv="VERSION" />
-<meta content="05/08/2019" http-equiv="CREATEDATE" />
+<meta content="11/07/2019" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
 <meta content="Copyright ©2019 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
@@ -299,7 +299,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>Currently, if you install the cmdlets as one user and run the 
 				cmdlets on the same computer as another user, you must first run 
 				the following command with administrative permissions in a 
-				Windows® PowerShell command window:</p>
+				Windows® PowerShell console:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Import-Module 
 				AzureInformationProtection</span></p>
 				<p class="Header3">2. Microsoft® Windows® 10 (recommended)</p>
@@ -361,6 +361,16 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					stored the RMS_Support_Tool files, and DebugView must be uncompressed 
 					into the subfolder “DebugView”.</li>
 				</ul>
+				<p class="Header3">4. Microsoft® Windows PowerShell 5.1 (required)</p>
+				<p>The RMS_Support_Tool requieres at least Microsoft® Windows® 
+				PowerShell version 5.1 installed.</p>
+				<p>To find which version of PowerShell you have installed, start 
+				a PowerShell console and type <span class="ConsoleTextShadow">
+				$PSVersionTable</span> and press ENTER. Look for the PSVersion 
+				value.</p>
+				<p>Please
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell" target="_blank">
+				upgrade existing Windows® PowerShell</a> if necessary.&nbsp;</p>
 				<p class="Header1">
 				Installation</p>
 				<p class="Header3">RMS_Support_Tool</p>
@@ -428,7 +438,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					environment, the PowerShell command "Set-ExecutionPolicy" 
 					has no effect. There're two methods to solve this issue: 
 					Either you right-click the downloaded script file and 
-					"Unblock" it, or you add the correcponding website to your 
+					"Unblock" it, or you add the corresponding website to your 
 					trusted sites settings in Internet Explorer.</li>
 					<li><strong>Script does not start with the error: 
 					Set-ExecutionPolicy : PowerShell updated your local 
