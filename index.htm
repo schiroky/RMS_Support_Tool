@@ -5,11 +5,11 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
-<meta content="1.1.0" http-equiv="VERSION" />
-<meta content="11/07/2019" http-equiv="CREATEDATE" />
+<meta content="1.1.1" http-equiv="VERSION" />
+<meta content="01/18/2020" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
-<meta content="Copyright ©2019 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
+<meta content="Copyright ©2020 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
 
 <title>RMS Support Tool</title>
 
@@ -230,9 +230,6 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 						<strong>P</strong>rotection <strong>C</strong>lient.</li>
 						<li>DRM = <strong>D</strong>igital <strong>R</strong>ights
 						<strong>M</strong>anagement</li>
-						<li>AADRM = <strong>A</strong>zure <strong>A</strong>ctive
-						<strong>D</strong>irectory <strong>R</strong>ights
-						<strong>M</strong>anagement</li>
 					</ul>
 					</li>
 				</ul>
@@ -272,9 +269,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<ul>
 					<li>The RMS_Support_Tool supports the following operating systems:
 					<ul>
-						<li>Microsoft® Windows® 7, Windows® 8, Windows® 8.1, 
-						Windows® 10, Windows® Server 2008, Windows® Server 2008 
-						R2, Windows® Server 2012, Windows® Server 2012 R2, 
+						<li>Microsoft® Windows® 8, Windows® 8.1, 
+						Windows® 10, Windows® Server 2012, Windows® Server 2012 R2, 
 						Windows® Server 2016 and Windows® Server 2019.</li>
 					</ul>
 					</li>
@@ -299,7 +295,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>Currently, if you install the cmdlets as one user and run the 
 				cmdlets on the same computer as another user, you must first run 
 				the following command with administrative permissions in a 
-				Windows® PowerShell console:</p>
+				Windows® PowerShell command window:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Import-Module 
 				AzureInformationProtection</span></p>
 				<p class="Header3">2. Microsoft® Windows® 10 (recommended)</p>
@@ -361,20 +357,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					stored the RMS_Support_Tool files, and DebugView must be uncompressed 
 					into the subfolder “DebugView”.</li>
 				</ul>
-				<p class="Header3">4. Microsoft® Windows PowerShell 5.1 (required)</p>
-				<p>The RMS_Support_Tool requieres at least Microsoft® Windows® 
-				PowerShell version 5.1 installed.</p>
-				<p>To find which version of PowerShell you have installed, start 
-				a PowerShell console and type <span class="ConsoleTextShadow">
-				$PSVersionTable</span> and press ENTER. Look for the PSVersion 
-				value.</p>
-				<p>Please
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell" target="_blank">
-				upgrade existing Windows® PowerShell</a> if necessary.&nbsp;</p>
-				<p class="Header1">
-				Installation</p>
-				<p class="Header3">RMS_Support_Tool</p>
-				<p>To install the RMS_Support_Tool, you must copy 
+				<p class="Header3">Installation</p>
+				<p>To install the RMS_Support_Tool manually, you must copy 
 				all its files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and 
 				RMS_Support_Tool.htm) to the following directory:</p>
 				<p><span class="ConsoleTextShadow">
@@ -393,7 +377,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				dbgview.chm, and Eula.txt) into the following directory:</strong></p>
 				<p><span class="ConsoleTextShadow">
 				%ProgramFiles%\WindowsPowerShell\Modules\RMS_Support_Tool\DebugView</span></p>
-				<p class="Header3">Check installation</p>
+				<p class="Header3"><span class="Header1">Check installation</span></p>
 				<p>To check if the installation was successful, you can call the 
 				Get-Module cmdlet with the following parameter:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Get-Module -ListAvailable</span></p>
@@ -410,7 +394,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">---------- -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------------</p>
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp; 
-				1.1.0&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1.1.1&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
 				<p class="HeaderParagraphSpaceBefore">
 				Usage</p>
@@ -438,7 +422,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					environment, the PowerShell command "Set-ExecutionPolicy" 
 					has no effect. There're two methods to solve this issue: 
 					Either you right-click the downloaded script file and 
-					"Unblock" it, or you add the corresponding website to your 
+					"Unblock" it, or you add the correcponding website to your 
 					trusted sites settings in Internet Explorer.</li>
 					<li><strong>Script does not start with the error: 
 					Set-ExecutionPolicy : PowerShell updated your local 
@@ -545,6 +529,19 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/office365/admin/security-and-compliance/enable-modern-authentication?redirectSourcePath=%252farticle%252f7dc1c01a-090f-4971-9677-f1b192d6c910&amp;view=o365-worldwide" rel="nofollow" target="_blank">modern authentication (ADAL)</a> is automatically enabled as 
 					a precaution.</li>
 				</ul>
+				<p class="Header3">- / -SilentReset</p>
+				<p>This command line-parameter does the same as "-Reset", but 
+				does not print any output - unless an error occurs when 
+				attempting to reset.</p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>If a silent reset triggers an error, you can use the 
+					additional parameter "-Verbose" to find out more about the 
+					cause of the error:<p>
+					<span class="ConsoleTextShadow" style="padding: 3px 5px; font-family: &quot;Lucida Sans Typewriter&quot;; font-size: 13px; background-color: rgb(244, 244, 244);">
+					PS C:\&gt; RMS_Support_Tool -SilentReset -Verbose</span></p>
+					</li>
+				</ul>
 				<p>
 				<span class="Header3">[5] USER LOGGING / -UserLogging</span></p>
 				<p><strong>IMPORTANT: Close all applications that run or use Microsoft® Office 
@@ -575,7 +572,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				</ul>
 				<p class="Header3">
 				[6] ADMIN LOGGING / -AdminLogging</p>
-				<p>This parameter collects only AADRM configuration information 
+				<p>This parameter collects only AIP service configuration information 
 				of your tenant.<br />
 				Please request assistance from your administrator to proceed 
 				this option.</p>
@@ -646,12 +643,14 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					recorded at all times. It depends on your environment which 
 					logs, or traces can be recorded.</li>
 				</ul>
-				<p class="Header3">AadrmConfiguration.log</p>
+				<p class="Header3">AipServiceConfiguration.log</p>
 				<p>This file is only collected if you selected 
-				<span class="ConsoleTextShadow">[6] ADMIN LOGGING</span>. The file contains the Rights Management 
-				configuration of your tenant. For more information, please see 
+				<span class="ConsoleTextShadow">[6] ADMIN LOGGING</span>. The file contains the 
+				Azure Information Protection 
+				service configuration of your tenant. For more information, please see 
 				the following documentation:
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps" rel="nofollow" target="_blank">Get-AadrmConfiguration</a>.</p>
+				<a class="Hyperlink" href="https://docs.microsoft.com/de-de/powershell/module/aipservice/get-aipserviceconfiguration" rel="nofollow" target="_blank">
+				Get-AipServiceConfiguration</a>.</p>
 				<p class="Header3">Tasklist.log</p>
 				<p>This file contains a list of currently running processes on 
 				the local computer. For more information, please see the 
@@ -676,7 +675,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				MSDRM-clients on your local system. It was created by 
 				DebugView.exe. For more information, please see the following 
 				documentation:
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">DebugView v4.81</a>.</p>
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">
+				DebugView v4.90</a>.</p>
 				<p class="Header3">MSIP/MSIPC/DRM logs</p>
 				<p>The following log folders contain more MSIP/MSIPC/DRM logging 
 				information:</p>
@@ -685,6 +685,17 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsolteListShadowButton">%LOCALAPPDATA%\Microsoft\DRM</p>
 				<p>For more information, please see the following documentation:
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/develop/debugging-applications-that-use-ad-rms" rel="nofollow" target="_blank">How-to: debug a rights-enabled application</a>.</p>
+				<p class="Header3">AIP plugin for Adobe Acrobat logs</p>
+				<p>The following log folders contain logging 
+				information:</p>
+				<p class="ConsoleListShadowTop">
+				%LOCALAPPDATA\Microsoft\RMSLocalStorage\MIP\logs</p>
+				<p class="ConsolteListShadowButton">
+				%USERPROFILE%\appdata\locallow\Microsoft\RMSLocalStorage\mip\logs</p>
+				<p>For more information, please see the following information:
+				<a class="Hyperlink" href="https://techcommunity.microsoft.com/t5/microsoft-information-protection/adobe-reader-and-microsoft-information-protection-integration/ba-p/482219" rel="nofollow" target="_blank">
+				Adobe reader and Microsoft Information Protection integration 
+				FAQs</a>.</p>
 				<p class="Header3">.cer-files (.ce_)</p>
 				<p>These files are exported website certificate URLs that were 
 				taken from this registry key:</p>
@@ -855,7 +866,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
   color:white;' class="auto-style7"><br />
 				</span>
 				<span style='line-height:115%;
-  color:white;' class="auto-style7">Copyright ©2019 Microsoft</span><span style='line-height:115%;
+  color:white;' class="auto-style7">Copyright ©2020 Microsoft</span><span style='line-height:115%;
   color:white;' class="auto-style10">®. All rights reserved.</span></p>
 
 
