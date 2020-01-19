@@ -7,4 +7,4 @@ If you want to report a problem, please use the [problem report template](https:
 
 If you want to request a feature, please use the [feature request template](https://github.com/schiroky/RMS_Support_Tool/issues/new?assignees=schiroky&labels=feature&template=feature_request.md&title=Feature+request%3A+).
 
-Copyright© 2019 by Microsoft®. All rights reserved.
+Copyright© 2020 by Microsoft®. All rights reserved.
