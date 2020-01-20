@@ -151,6 +151,10 @@
 	white-space: normal;
 	word-spacing: 0px;
 }
+.auto-style1 {
+	letter-spacing: normal;
+	background-color: #FFFFFF;
+}
 </style>
 
 <meta content="The RMS_Support_Tool provides the functionality to reset all Microsoft® AIP/AD RMS services. Its main purpose is to delete the currently downloaded policies and reset the user settings for AIP/AD RMS service, and it can also be used to collect data for troubleshooting." name="description" />
@@ -233,6 +237,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					</ul>
 					</li>
 				</ul>
+				<p>&nbsp;</p>
 				<p class="Header1">
 				MIT
 				License</p>
@@ -260,6 +265,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				USING THE SOFTWARE YOU ACCEPT THIS DISCLAIMER OF WARRANTY. 
 				IF YOU DO NOT ACCEPT THE TERMS, DO NOT INSTALL OR USE THIS 
 				SOFTWARE.</strong></p>
+				<p>
+				&nbsp;</p>
 				<p class="Header1">
 				Requirements</p>
 				<p>Before you can use the RMS_Support_Tool make sure that your 
@@ -357,7 +364,28 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					stored the RMS_Support_Tool files, and DebugView must be uncompressed 
 					into the subfolder “DebugView”.</li>
 				</ul>
-				<p class="Header1">Installation</p>
+				<p>&nbsp;</p>
+				<p class="Header1">Installation via PowerShell Gallery 
+				(recommended)</p>
+				<p>RMS_Support_Tool is available on
+				<a href="https://www.powershellgallery.com/packages/RMS_Support_Tool/1.1.1" target="_blank">
+				PowerShell Gallery</a>.</p>
+				<p>To be able to install packages from PowerShell Gallery you 
+				need to have the latest version of the PowerShellGet-module 
+				installed:</p>
+				<ul>
+					<li>
+					<a href="https://docs.microsoft.com/en-us/powershell/scripting/gallery/installing-psget?view=powershell-7" target="_blank">
+					Installing PowerShellGet</a>.</li>
+				</ul>
+				<p>You must run the following command with administrative permissions,
+				<span style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+				either in a Windows® PowerShell command window or in Windows® 
+				PowerShell ISE, to install the RMS_Support_Tool:</span></p>
+				<p class="ConsoleListShadow"><span class="auto-style1">PS C:\&gt; 
+				Install-Module -Name RMS_Support_Tool</span></p>
+				<p>&nbsp;</p>
+				<p class="Header1">Manual Installation</p>
 				<p>To install the RMS_Support_Tool manually, you must copy 
 				all its files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and 
 				RMS_Support_Tool.htm) to the following directory:</p>
@@ -396,6 +424,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp; 
 				1.1.1&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
+				<p>&nbsp;</p>
 				<p class="HeaderParagraphSpaceBefore">
 				Usage</p>
 				<p>You must run the RMS_Support_Tool with administrative permissions,
@@ -500,6 +529,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
 				<span class="ConsoleTextShadow">Get-Help RMS_Support_Tool 
 				-Parameter CompressLogs</span></p>
+				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">
+				&nbsp;</p>
 				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;" class="HeaderParagraphSpaceBefore">
 				User experience</p>
 				<p>RMS_Support_Tool provides the following features (menu entry 
@@ -620,6 +651,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<ul>
 					<li>This option is not available in the menu.</li>
 				</ul>
+				<p>&nbsp;</p>
 				<p class="Header1">
 				Script log file</p>
 				<p>The RMS_Support_Tool creates the following log file. The log file 
@@ -630,6 +662,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				lists the results. It also logs general environment information 
 				from the used client machine, like the Windows® edition or 
 				Windows® PowerShell version.</p>
+				<p>&nbsp;</p>
 				<p class="Header1">
 				Recorded log files</p>
 				<p>The RMS_Support_Tool collects the following log files and folders. If 
