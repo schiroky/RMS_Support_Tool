@@ -1,5 +1,5 @@
 # RMS Support Tool
-The script module provides the functionality to reset all Microsoft® AIP/MIP/AD RMS client services. Its main purpose is to delete the currently downloaded policies and reset the user settings for AIP/MIP/AD RMS service, and can also be used to collect data for troubleshooting.
+The 'RMS Support Tool' provides the functionality to reset allMicrosoft® AIP/MIP/AD RMS client services. Its main purpose isto delete the currently downloaded policies, reset all settingsfor AIP/MIP/AD RMS services, and it can also be used to collectand analyze troubleshooting data.
 
 Before using the RMS Support Tool, please ensure to read its [manual](https://aka.ms/RMS_Support_Tool) for detailed information about requirements and usage.
 
