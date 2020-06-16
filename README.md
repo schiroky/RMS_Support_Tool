@@ -1,5 +1,5 @@
 # RMS Support Tool
-The 'RMS Support Tool' provides the functionality to reset allMicrosoft® AIP/MIP/AD RMS client services. Its main purpose isto delete the currently downloaded policies, reset all settingsfor AIP/MIP/AD RMS services, and it can also be used to collectand analyze troubleshooting data.
+The 'RMS Support Tool' provides the functionality to reset allMicrosoft® AIP/MIP/AD RMS client services. Its main purpose isto delete the currently downloaded policies, reset all settingsfor AIP/MIP/AD RMS services, and it can also be used to collect and analyze troubleshooting data.
 
 Before using the RMS Support Tool, please ensure to read its [manual](https://aka.ms/RMS_Support_Tool) for detailed information about requirements and usage.
 
