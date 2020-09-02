@@ -5,8 +5,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
-<meta content="1.4.1" http-equiv="VERSION" />
-<meta content="07/14/2020" http-equiv="CREATEDATE" />
+<meta content="1.4.2" http-equiv="VERSION" />
+<meta content="09/02/2020" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
 <meta content="Copyright ©2020 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
@@ -624,7 +624,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>To install the RMS_Support_Tool manually, you must create the 
 				following folder, and copy/paste all the RMS_Support_Tool files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and RMS_Support_Tool.htm) 
 				into this folder:</p>
-				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.1</span></p>
+				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.2</span></p>
 				<p>This path must be listed in the PSModulePath environment 
 					variable. For more information, please read how
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path?view=powershell-5.1#to-view-the-psmodulepath-variable" rel="nofollow" target="_blank">to view the PSModulePath variable</a>.</p>
@@ -648,7 +648,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<a class="Hyperlink" href="https://download.sysinternals.com/files/DebugView.zip">
 					DebugView</a> tool from Windows® Sysinternals (Dbgview.exe, 
 				dbgview.chm, and Eula.txt) into the following directory:</p>
-				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.1\DebugView</span></p>
+				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.2\DebugView</span></p>
 				<p class="Header3">
 				<a name="Check_installation">Check installation</a></p>
 				<p>To verify if the installation was successful, you can call the 
@@ -667,7 +667,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">----------&nbsp;&nbsp; -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------------</p>
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-				1.4.1&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				1.4.2&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
 				<p>To verify that an installation was performed using PowerShell 
 				Gallery, you can run the following command:</p>
@@ -684,7 +684,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">-------&nbsp;&nbsp;&nbsp;&nbsp; 
 				----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------&nbsp;&nbsp;&nbsp;&nbsp; -----------</p>
-				<p class="ConsolteListShadowButton">1.4.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<p class="ConsolteListShadowButton">1.4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp; PSGallery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				The 'RMS Support Tool' provides the functionality to reset...</p>
 				<p>&nbsp;</p>
@@ -716,9 +716,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				-Name RMS_Support_Tool</span></p>
 				<p>If you want to remove a particular version of the 
 				RMS_Support_Tool, for example version 
-				1.3.2, you must run the following command:</p>
+				1.4.1, you must run the following command:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Uninstall-Module 
-				-RequiredVersion "1.3.2" -Name RMS_Support_Tool</span></p>
+				-RequiredVersion "1.4.1" -Name RMS_Support_Tool</span></p>
 				<p>If the RMS_Support_Tool was installed manually, you must also 
 				remove it manually by deleting its installation folder.</p>
 				<p><em>Note:</em></p>
@@ -900,6 +900,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>The following file system folders are cleaned up as well:</p>
 				<p class="ConsoleListShadowTop">
 				%LOCALAPPDATA%\Microsoft\Office\DLP\mip</p>
+				<p class="ConsoleListShadow">%TEMP%\Diagnostics</p>
 				<p class="ConsoleListShadow">%LOCALAPPDATA%\Microsoft\MSIP</p>
 				<p class="ConsoleListShadow">%LOCALAPPDATA%\Microsoft\MSIPC</p>
 				<p class="ConsolteListShadowButton">%LOCALAPPDATA%\Microsoft\DRM</p>
@@ -945,7 +946,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				(%temp%\RMS_Support_Tool\Logs). Every time you call this option, 
 				a new unique subfolder will be created in the logs-folder that 
 				reflects the date and time when it was created, e.g. 
-				“200713-133005”. While the files are being cached, you will see 
+				“200902-133005”. While the files are being cached, you will see 
 				a progress bar “Collecting logs...".</p>
 				<p>In the last step, the RMS_Support_Tool resets all activated 
 				log, trace, and debug settings to their defaults. This process 
@@ -1110,7 +1111,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">Issuer:&nbsp;&nbsp; C=US, 
 				S=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft 
 				Secure Server CA 2011</p>
-				<p class="ConsolteListShadowButton">Status:&nbsp;&nbsp; Ok (200)</p>
+				<p class="ConsolteListShadowButton">Status:&nbsp;&nbsp; 200</p>
 				<p>In addition, analyze results are written into log file
 				<a class="Hyperlink" href="#EndpointURLs.log">EndpointURLs.log</a> 
 				in the subfolder "Analyze" of the Logs folder.</p>
@@ -1370,6 +1371,16 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				registry key").</p>
 				<ul>
 					<li>
+					<p class="Header4">Office Diagnostics logging</p>
+					</li>
+				</ul>
+				<p class="Logs-Text">Office Diagnostics log files collected from 
+				the users temp folder:</p>
+				<p><span class="Logs-ConsoleTextShadow">
+				%TEMP%\Diagnostics<br />
+				</span></p>
+				<ul>
+					<li>
 					<p class="Header4">MSOIdentityCRL trace</p>
 					</li>
 				</ul>
@@ -1381,21 +1392,6 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Microsoft® Online 
 				Services Sign-in Assistant</a>.&nbsp;</p>
 				<ul>
-					<li><span class="Header4">.cer-files (.ce_)</span><br />
-					<br />
-					These files are created by the analyze option
-				<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
-				Endpoint URLs.</a><br />
-					<br />
-					<em>Note:</em><br />
-&nbsp;<ul>
-						<li>The files are exported with the file extension .ce_ 
-					instead of .cer, since some security programs can 
-					block these files.<br />
-						<br />
-						</li>
-					</ul>
-					</li>
 					<li>
 					<p class="Header4">CertMachine.log and CertUser.log</p>
 					</li>
@@ -1569,7 +1565,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Fltmc.exe</a>.</p>
 				<p class="Header3">COLLECT</p>
 				<p>Log files and folders collected via the sub-entries of the
-				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu:</p>
+				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu.<br />
+				Results are written in the subfolder "Collect" of the Logs 
+				folder:&nbsp;</p>
 				<ul>
 					<li>
 					<p class="Header4">
@@ -1615,7 +1613,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Get-LabelPolicy</a>.</p>
 				<p class="Header3">ANALYZE</p>
 				<p>Log files and folders collected via the sub-entries of the
-				<a class="Hyperlink" href="#[Y]_ANALYZE_/_-">ANALYZE</a> menu:</p>
+				<a class="Hyperlink" href="#[Y]_ANALYZE_/_-">ANALYZE</a> menu.<br />
+				Results are written in the subfolder "Analyze" of the Logs 
+				folder:&nbsp;</p>
 				<ul>
 					<li>
 					<p class="Header4"><a name="EndpointURLs.log">EndpointURLs.log</a></p>
@@ -1627,6 +1627,21 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Endpoint URLs</a> analyze 
 				option.</p>
 				<ul>
+					<li><span class="Header4">.cer-files (.ce_)</span><br />
+					<br />
+					These files are created by the option
+				<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
+				Endpoint URLs.</a><br />
+					<br />
+					<em>Note:</em><br />
+&nbsp;<ul>
+						<li>The files are exported with the file extension .ce_ 
+					instead of .cer, since some security programs can 
+					block these files.<br />
+						<br />
+						</li>
+					</ul>
+					</li>
 					<li>
 					<p class="Header4"><a name="Protection.log">Protection.log</a></p>
 					</li>
