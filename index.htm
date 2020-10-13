@@ -5,8 +5,8 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
-<meta content="1.4.2" http-equiv="VERSION" />
-<meta content="09/02/2020" http-equiv="CREATEDATE" />
+<meta content="2.0.0" http-equiv="VERSION" />
+<meta content="13/10/2020" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
 <meta content="Copyright ©2020 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
@@ -15,7 +15,7 @@
 
 <style type="text/css">
 .HeaderBackground {
-	background-color: #282828;
+	background-color: #2b579a;
 	width: 100%;
 	color: #FFFFFF;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -235,9 +235,6 @@
 	background-color: #f4f4f4;
 	margin-left: 40px;
 }
-.HeaderDescription {
-	font-size: 24px;
-}
 </style>
 
 <meta content="The RMS_Support_Tool provides the functionality to reset all Microsoft® AIP/AD RMS services. Its main purpose is to delete the currently downloaded policies and reset the user settings for AIP/AD RMS service, and it can also be used to collect data for troubleshooting." name="description" />
@@ -246,28 +243,19 @@
 
 <body style="margin: 0">
 
-<div class="HeaderBackground" style="height: 296px">
+<div class="HeaderBackground">
 	<br />
-        <div style="border-left: 1px solid lightgray; border-right: 0px solid lightgray; border-top: 0px solid lightgray; border-bottom: 0px solid lightgray; padding: 0px 20px; width:950px; margin:auto; background-color:#282828; height: 234px;">
+        <div style="border-left: 1px solid lightgray; border-right: 0px solid lightgray; border-top: 0px solid lightgray; border-bottom: 0px solid lightgray; padding: 0px 20px; width:950px; margin:auto; background-color:#2b579a; height: 93px;">
 
             <div class="PageSize" style="width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12pt; height: 94px;">
 				
 				
 				<p>
 				<span class="HeaderTitle">RMS Support Tool</span><br />
-				<span class="HeaderSubtitle">
 				<span style='line-height:115%;
-  color:white;' class="auto-style7">Microsoft</span><span style='line-height:115%;
-  color:white;' class="auto-style10">©</span><span style='line-height:115%;
-  color:white;' class="auto-style7"> </span>
-				<span lang=EN-US style='line-height:115%;
-  color:white;' class="auto-style7">Customer Service &amp; Support EMEA<o:p></o:p></span></span></p>
-				<p style="height: 137px">
-				<span class="HeaderDescription">The 'RMS Support Tool' provides the functionality to reset all Microsoft® 
-				AIP/MIP/AD RMS client services. Its main purpose is to delete the currently 
-				downloaded policies and reset the user settings for AIP/MIP/AD RMS 
-				service, and it can also be used to collect data for 
-				troubleshooting.</span></p>
+  color:white;' class="auto-style7">
+				<span class="HeaderSubtitle">
+				Version 2.0.0</span></span></p>
 
 
             </div>
@@ -285,23 +273,87 @@
 width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right"> </p>
 				<ul>
 					<li class="Hyperlink">
-					<a href="#Introduction" class="Hyperlink">Introduction</a></li>
+					<a href="#Introduction" class="Hyperlink">Introduction</a><ul>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#MIT_License">MIT License</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#DISCLAIMER_OF_WARRANTY">
+						Disclaimer of warranty</a></li>
+					</ul>
+					</li>
 					<li class="Hyperlink">
-					<a href="#Requirements" class="Hyperlink">Requirements</a></li>
+					<a href="#Requirements" class="Hyperlink">Requirements</a><ul>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Microsoft®_Azure_Information_Protection_cmdlets_(optional)">
+						Microsoft® Azure Information Protection cmdlets</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Internet_access_(required)">
+						Internet access</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Exchange_Online_PowerShell_V2_module_(recommended)">
+						Exchange Online PowerShell V2 module</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#AIPService_module_(recommended)">
+						AIPService module</a></li>
+					</ul>
+					</li>
 					<li class="Hyperlink">
-					<a class="Hyperlink" href="#Installation">Installation</a></li>
+					<a class="Hyperlink" href="#Installation">Installation</a><ul>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Quick_installation">Quick 
+						installation</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Step-by-step_installation">
+						Step-by-step installation</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Manual_Installation">Manual 
+						Installation</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Installing_a_previous_version">
+						Installing a previous version</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#Check_installation">Check 
+						installation</a></li>
+					</ul>
+					</li>
 					<li class="Hyperlink"><a class="Hyperlink" href="#Update">
 					Update</a></li>
 					<li class="Hyperlink">
 					<a href="#Uninstall" class="Hyperlink">Uninstall</a></li>
 					<li class="Hyperlink">
 					<a href="#User_experience" class="Hyperlink">User experience</a></li>
-					<li class="Hyperlink"><a href="#Features" class="Hyperlink">Features</a></li>
+					<li class="Hyperlink"><a href="#Features" class="Hyperlink">Features</a><ul>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[I]_INFORMATION_/_-Information">
+						INFORMATION</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[D]_DISCLAIMER_/_-Disclaimer">
+						DISCLAIMER</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[G]_HELP_/_-Help">HELP</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[R]_RESET_/_-Reset_String">
+						RESET</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
+						RECORD PROBLEM</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[Y]_ANALYZE_/_-">ANALYZE</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[Z]_COMPRESS_LOGS_/_-CompressLogs">
+						COMPRESS LOGS</a></li>
+						<li class="Hyperlink">
+						<a class="Hyperlink" href="#[X]_EXIT_/_-">EXIT</a></li>
+					</ul>
+					</li>
 					<li class="Hyperlink">
 					<a class="Hyperlink" href="#Script_log_file">Script log file</a></li>
 					<li class="Hyperlink">
 					<a class="Hyperlink" href="#Log files and folders">Log files and folders</a></li>
 				</ul>
+				<p>&nbsp;</p>
 				<p class="Header1">
 				<a name="Introduction">Introduction</a></p>
 				<p>
@@ -315,10 +367,35 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				to delete the currently downloaded policies, reset all settings 
 				for AIP/MIP/AD RMS services, and it can also be used to collect 
 				and analyze troubleshooting data.</p>
+				<p>
+				<span lang="EN-US">
+				With the RMS_Support_Tool, you can run the most common options 
+				without local administrative permissions:<br />
+				<a class="Hyperlink" href="#[R]_RESET_/_-Reset_String">RESET</a>,
+				<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
+				RECORD PROBLEM</a>, <a class="Hyperlink" href="#[Y]_ANALYZE_/_-">
+				ANALYZE</a>
+				<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
+				Endpoint URLs</a> and
+				<a class="Hyperlink" href="#[T]_Protection_/_-AnalyzeProtection">
+				Protection</a>.<o:p></o:p></span></p>
+				<p>
+				<span lang="EN-US">
+				However, if you run the RMS_Support_Tool with local 
+				administrative permissions, you will get some more collected 
+				logs (<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">RECORD 
+				PROBLEM</a>) and a complete
+				<a class="Hyperlink" href="#[R]_RESET_/_-Reset_String">RESET</a> 
+				of all AIP/MIP/MSIPC/AD RMS settings, instead of just 
+				user-specific settings being reset. By the way: The latter 
+				option is sufficient in most cases to reset
+				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
+				Microsoft® 365</a> apps, while a complete reset 
+				is usually useful for all other applications.</span></p>
 				<p><em>Note:</em></p>
 				<ul>
 					<li><strong>Please only run RMS_Support_Tool if you have 
-					been prompted to do so by a Microsoft® support technician.</strong></li>
+					been prompted to do so by a Microsoft® support engineer.</strong></li>
 					<li><strong>Do not modify or delete any component of the 
 					RMS_Support_Tool or the resulting trace files, as 
 					this will result in incorrect information when analyzing 
@@ -343,8 +420,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					</li>
 				</ul>
 				<p class="Header3">
-				MIT
-				License</p>
+				<a name="MIT_License">MIT
+				License</a></p>
 				<p>
 				Permission is hereby granted, free of charge, to any person 
 				obtaining a copy of this software and associated documentation 
@@ -356,7 +433,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				conditions:</p>
 				<p>
 				<strong>
-				DISCLAIMER OF WARRANTY: </strong>THE SOFTWARE IS PROVIDED "AS 
+				<a name="DISCLAIMER_OF_WARRANTY">DISCLAIMER OF WARRANTY</a>: </strong>THE SOFTWARE IS PROVIDED "AS 
 				IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING 
 				BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
 				FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
@@ -382,14 +459,14 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1" target="_blank">
 					PowerShell 5.1</a> on the following operating systems:
 					<ul>
-						<li>Microsoft® Windows® 8, Windows® 8.1, 
+						<li>Microsoft® Windows® 8.1, 
 						Windows® 10 (recommeded), Windows® Server 2012, Windows® Server 2012 R2, 
 						Windows® Server 2016 and Windows® Server 2019.</li>
 					</ul>
 					</li>
 					<li>The RMS_Support_Tool supports the following Microsoft® Office 
 					versions:<ul>
-						<li>Microsoft® Office 2010, Microsoft® Office 2013, 
+						<li>Microsoft® Office 2013, 
 						Microsoft® Office 2016, Microsoft® Office 2019, and 
 						Microsoft® 365.</li>
 					</ul>
@@ -402,7 +479,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				installed with the
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/download/details.aspx?id=53018" target="_blank">Azure Information Protection client</a>. Please ensure to have 
 				the latest version of the "AzureInformationProtection" cmdlets installed by checking its
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/rms-client/client-version-release-history" target="_blank">client version release history</a>.</p>
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history" target="_blank">client version release history</a>.</p>
 				<p>Microsoft® Azure Information Protection cmdlets are 
 					required to run the option
 					<a class="Hyperlink" href="#[T]_Protection_/_-AnalyzeProtection">
@@ -418,11 +495,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Header3">2. <a name="Internet_access_(required)">Internet access (required)</a></p>
 				<p>The RMS_Support_Tool uses additional sources and services 
 				from the Internet to make its functionality fully available.</p>
-				<p>For instance, for logging and tracing purposes, the tool 
-					<a class="Hyperlink" href="https://download.sysinternals.com/files/DebugView.zip">
-					DebugView</a> from Windows® Sysinternals is required.</p>
 				<p>Unexpected errors may occur, and some features may be 
-					limited, if there is no connection to the Internet.</p>
+					limited, if there is no connection to the Internet.&nbsp;&nbsp;</p>
 				<p class="Header3">
 				3. 
 				<a name="Exchange_Online_PowerShell_V2_module_(recommended)">Exchange Online PowerShell V2 module (recommended)</a></p>
@@ -430,8 +504,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2" target="_blank">Exchange Online PowerShell V2 
 				module</a> is required to 
 				proceed the option
-				<a class="Hyperlink" href="#[L]_Labels_and_policies_/_-CollectLabelsAndPolicies">
-				SCC labels and policies</a> from the<strong> </strong>menu<strong>
+				<a class="Hyperlink" href="#[L]_MSC_labels_and_policies_/_-CollectMSCLabelsAndPolicies">
+				MSC labels and policies</a> from the<strong> </strong>menu<strong>
 				</strong><a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a>.</p>
 				<p>If you do not have this module installed, the 
 				RMS_Support_Tool will install it from
@@ -449,10 +523,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/aipservice/?view=azureipps" target="_blank">
 				AIPService module</a> is required to 
 				proceed the options
-				<a class="Hyperlink" href="#[A]_AIP_service_configuration_/_-CollectAipServiceConfiguration">
-				AIP service configuration</a>,
-				<a class="Hyperlink" href="#[O]_AIP_protection_templates_/_-CollectAipProtectionTemplates">
-				AIP protection templates</a> from the
+				<a class="Hyperlink" href="#[A]_AIP_service_configuration_/_-CollectAIPServiceConfiguration">AIP service configuration</a>,
+				<a class="Hyperlink" href="#[O]_AIP_protection_templates_/_-CollectAIPProtectionTemplates">AIP protection templates</a> from the
 				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu 
 				entry, and the <a class="Hyperlink" href="#[Y]_ANALYZE_/_-">
 				ANALYZE</a> option
@@ -479,14 +551,27 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				PowerShell Gallery repository, PowerShellGet requires the NuGet 
 				provider. The NuGet provider is responsable for consuming the 
 				RMS_Support_Tool package from PowerShell Gallery.</p>
-				<p>There're three methods available to install the 
+				<p>There're four methods available to install the 
 				RMS_Support_Tool: the 
 				<a class="Hyperlink" href="#Quick_installation">quick installation</a> 
-				(recommended), if you want a little more control, the 
+				(recommended). If you want a little more control, the 
 				<a class="Hyperlink" href="#Step-by-step_installation">step-by-step installation</a>, 
-				and the
-				<a class="Hyperlink" href="#Manual_Installation_(not_recommended)">
-				manual installation</a> (not recommended).</p>
+				the <a class="Hyperlink" href="#Manual_Installation">manual 
+				installation</a>, and if necessary, instructions for installing a
+				<a class="Hyperlink" href="#Installing_a_previous_version">
+				previous version</a>.</p>
+				<p>To start one of the above installation methods, right-click 
+				the Microsoft® Windows® START button and click either "Windows 
+				PowerShell" or "Windows PowerShell (Admin)" -
+				<span class="auto-style1">the latter, if if you do have local administrative 
+				permissions.</span></p>
+				<p>Alternatively, you can click the Microsoft® Windows® 
+				START button and start typing "power". While you type, you'll 
+				see suggestion "Windows PowerShell". Click
+				<span style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+				either "Windows PowerShell" or "Windows PowerShell ISE".</span><span class="auto-style1"> 
+				If you do have local administrative permissions, you can also 
+				right click the corresponding entry and "Run as administrator".</span></p>
 				<p><em>Note:</em></p>
 				<ul>
 					<li>For additional information you can also see the 
@@ -494,7 +579,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/gallery/installing-psget?view=powershell-5.1" target="_blank">Installing PowerShellGet</a>.</li>
 				</ul>
 				<p class="Header3"><a name="Quick_installation">Quick 
-				installation</a> (recommended)</p>
+				installation</a></p>
 				<p>The fastest and easiest way to install the RMS_Support_Tool:</p>
 				<p class="Header4">1. Install RMS_Support_Tool</p>
 				<p>
@@ -509,7 +594,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				Install-Module -Name RMS_Support_Tool</span></p>
 				<p class="Header4">2. Install required components</p>
 				<p>If you do not have a required component installed on your 
-				computer, you will be asked to do so. You must conform the 
+				computer, you will be asked to do so. You must confirm the 
 				installation for the NuGet Provider and PowerShell Gallery as a 
 				trusted reprository, and under certain circumstances, you may 
 				need to confirm the installation of PowerShellGet as well. </p>
@@ -521,9 +606,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Set-ExecutionPolicy -Scope CurrentUser 
 				-ExecutionPolicy RemoteSigned -Force</span></p>
 				<p>The RMS_Support_Tool is signed with a certificate. So you can 
-				be sure that the script module was written by the author and not 
-				manipulated, because it was digitally signed by the author 
-				before publication.&nbsp;&nbsp;</p>
+				be sure that the script module was written by the author and has 
+				not been manipulated, because it was digitally signed by the 
+				author before publication. &nbsp;</p>
 				<p><em>Note:</em></p>
 				<ul>
 					<li>Please pay attention to point
@@ -585,16 +670,17 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<li><strong>Set-ExecutionPolicy has no effect</strong><br />
 					This 
 					applies only to a manual installation: If 
-					you downloaded the RMS_Support_Tool from an untrusted website, it will 
+					you downloaded the RMS_Support_Tool from its
+					<a class="Hyperlink" href="https://aka.ms/RMS_Support_Tool/Latest" target="_blank">GitHub website</a>, it will 
 					be extended by an
 					<a class="Hyperlink" href="https://blogs.technet.microsoft.com/askcore/2013/03/24/alternate-data-streams-in-ntfs" rel="nofollow" target="_blank">Alternate Data Streams in NTFS</a> (ADS). If the 
 					corresponding website in the ADS is not trusted in your 
 					environment, the PowerShell command "Set-ExecutionPolicy" 
 					has no effect.<br />
 					There're two methods to solve this issue: 
-					Either you right-click the downloaded script file and 
+					Either you right-click the downloaded script files and 
 					"Unblock" it, or you add the correcponding website to your 
-					trusted sites settings in Internet Explorer.</li>
+					trusted sites settings.</li>
 					<li><strong>Script does not start and returns an error<br />
 					</strong>"Set-ExecutionPolicy : PowerShell updated your local 
 					preference successfully, but the setting is overridden by 
@@ -615,7 +701,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					Set-ExecutionPolicy</a>.</li>
 				</ul>
 				<p class="Header3">
-				<a name="Manual_Installation_(not_recommended)">Manual Installation (not recommended)</a></p>
+				<a name="Manual_Installation">Manual Installation</a></p>
 				<p>If you’re using the RMS_Support_Tool in an environment 
 					that does not have internet access, you need to proceed with the
 					manual 
@@ -624,7 +710,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>To install the RMS_Support_Tool manually, you must create the 
 				following folder, and copy/paste all the RMS_Support_Tool files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and RMS_Support_Tool.htm) 
 				into this folder:</p>
-				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.2</span></p>
+				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\2.0.0</span></p>
 				<p>This path must be listed in the PSModulePath environment 
 					variable. For more information, please read how
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path?view=powershell-5.1#to-view-the-psmodulepath-variable" rel="nofollow" target="_blank">to view the PSModulePath variable</a>.</p>
@@ -642,13 +728,37 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<li>Unexpected errors may occur, and some features may be 
 					limited if there is no connection to the Internet.</li>
 				</ul>
-				<p class="Header4">2. Sysinternals DebugView</p>
-				<p>If you're working in an environment that does not have 
-				internet access, in addition you must copy all files of the 
-					<a class="Hyperlink" href="https://download.sysinternals.com/files/DebugView.zip">
-					DebugView</a> tool from Windows® Sysinternals (Dbgview.exe, 
-				dbgview.chm, and Eula.txt) into the following directory:</p>
-				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\1.4.2\DebugView</span></p>
+				<p class="Header3"><a name="Installing_a_previous_version">
+				Installing a previous version</a></p>
+				<p>As of version 2.0.0 of the RMS_Support_Tool, you can run the 
+				most common options without local administrative permissions 
+				because support for Microsoft® Office 2010 has been 
+				discontinued. Therefore, the RMS_Support_Tool no longer needs to 
+				record MSDRM logs via
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" target="_blank">
+				DebugView</a>.</p>
+				<p>If you still want to analyze an MSDRM application, you must 
+				install an earlier version of the RMS_Support_Tool that provides 
+				MSDRM recording. 
+				<a class="Hyperlink" href="https://github.com/schiroky/RMS_Support_Tool/releases/tag/1.5.1">Version 1.5.1</a> is the last version which offers 
+				this possibility.</p>
+				<p>To install version 1.5.1, you must first remove the current 
+				version of the RMS_Support_Tool (See the
+				<a class="Hyperlink" href="#Uninstall">uninstall</a> section of 
+				this help file). Second, you must follow the 
+				<a class="Hyperlink" href="#Step-by-step_installation">step-by-step 
+				installation</a>, but for point 4 (<a class="Hyperlink" href="#Install_RMS_Support_Tool">Install RMS_Support_Tool</a>) you 
+				must instead run the following command to install the 
+				RMS_Support_Tool if you are running PowerShell with user 
+				permissions:</p>
+				<p><span class="ConsoleTextShadow">PS C:\&gt; 
+				Install-Module -Name RMS_Support_Tool -RequiredVersion 1.5.1 -Scope CurrentUser</span></p>
+				<p>If you have local administrative permissions, you can run the 
+				following command instead:&nbsp;</p>
+				<p><span class="ConsoleTextShadow">PS C:\&gt; 
+				Install-Module -Name RMS_Support_Tool -RequiredVersion 1.5.1</span></p>
+				<p>Then proceed with the 
+				<a class="Hyperlink" href="#Step-by-step_installation">step-by-step installation</a>.</p>
 				<p class="Header3">
 				<a name="Check_installation">Check installation</a></p>
 				<p>To verify if the installation was successful, you can call the 
@@ -667,7 +777,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">----------&nbsp;&nbsp; -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------------</p>
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-				1.4.2&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				2.0.0&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
 				<p>To verify that an installation was performed using PowerShell 
 				Gallery, you can run the following command:</p>
@@ -684,7 +794,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">-------&nbsp;&nbsp;&nbsp;&nbsp; 
 				----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------&nbsp;&nbsp;&nbsp;&nbsp; -----------</p>
-				<p class="ConsolteListShadowButton">1.4.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<p class="ConsolteListShadowButton">2.0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp; PSGallery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				The 'RMS Support Tool' provides the functionality to reset...</p>
 				<p>&nbsp;</p>
@@ -716,9 +826,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				-Name RMS_Support_Tool</span></p>
 				<p>If you want to remove a particular version of the 
 				RMS_Support_Tool, for example version 
-				1.4.1, you must run the following command:</p>
+				1.5.1, you must run the following command:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; Uninstall-Module 
-				-RequiredVersion "1.4.1" -Name RMS_Support_Tool</span></p>
+				-RequiredVersion "1.5.1" -Name RMS_Support_Tool</span></p>
 				<p>If the RMS_Support_Tool was installed manually, you must also 
 				remove it manually by deleting its installation folder.</p>
 				<p><em>Note:</em></p>
@@ -731,12 +841,19 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>&nbsp;</p>
 				<p class="Header1ParagraphSpaceBefore">
 				<a name="User_experience">User experience</a></p>
-				<p>To run the RMS_Support_Tool, click the Microsoft® Windows® 
+				<p>To run the RMS_Support_Tool, right-click the Microsoft® 
+				Windows® START button and click either "Windows PowerShell" or 
+				"Windows PowerShell (Admin)" - <span class="auto-style1">the 
+				latter, if you 
+				do have local administrative permissions.</span>&nbsp;</p>
+				<p>Alternatively, you can click the Microsoft® Windows® 
 				START button and start typing "power". While you type, you'll 
 				see suggestion "Windows PowerShell". Click
 				<span style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
-				either "Windows PowerShell" or "Windows PowerShell ISE".</span></p>
-				<p>To start the RMS_Support_Tool , simply type 
+				either "Windows PowerShell" or "Windows PowerShell ISE", and i</span><span class="auto-style1">f 
+				you do have local administrative permissions, you can also right 
+				click the corresponding entry and "Run as administrator".</span></p>
+				<p>To start the RMS_Support_Tool, simply type 
 				"RMS_Support_Tool" into the PowerShell command window, and press 
 				enter. For example:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; RMS_Support_Tool</span></p>
@@ -782,16 +899,16 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 
    			 Please select an option and press enter:</p>
 				<p>For all sub-items of the 
-				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu, 
-				and for option
-				<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
-				RECORD PROBLEM</a>, you must run the 
+				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu, you must run the 
 				RMS_Support_Tool as a user with local administrative 
-				permissions. For the sub-item
+				permissions. For option
+				<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
+				RECORD PROBLEM</a>, and for sub-item
 				<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
 				Endpoint URLs</a> of the
 				<a class="Hyperlink" href="#[Y]_ANALYZE_/_-">ANALYZE</a> menu, 
-				you may run as user local administratve permissions.</p>
+				you may run as user with local <span class="auto-style1">
+				administrative </span>permissions.</p>
 				<p>To run the RMS_Support_Tool with administative permissions, click the Microsoft® Windows® START button and start 
 				typing "power". While you type, you'll see suggestion "Windows 
 				PowerShell". Right-click this entry. In the context menu, select 
@@ -820,14 +937,15 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p style="box-sizing: border-box; font-variant: normal; margin-left: 0px; margin-right: 0px; orphans: 2; text-indent: 0px; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;" class="Header1">
 				<a name="Features">Features</a></p>
 				<p>RMS_Support_Tool provides the following features (menu entry 
-				/ command line parameter):<p class="Header3">[I] INFORMATION / 
-				-Information</p>
+				/ command line parameter):<p class="Header3">
+				<a name="[I]_INFORMATION_/_-Information">[I] INFORMATION / 
+				-Information</a></p>
 				<p>This shows syntax and a description.</p>
-				<p class="Header3">[D] DISCLAIMER / -Disclaimer</p>
+				<p class="Header3"><a name="[D]_DISCLAIMER_/_-Disclaimer">[D] DISCLAIMER / -Disclaimer</a></p>
 				<p>This displays the disclaimer of warranty.<br />
 				Please read it carefully, and act accordingly.</p>
-				<p class="Header3">[G] HELP / -Help</p>
-				<p>This opens the help file (RMS_Support_Tool.htm).</p>
+				<p class="Header3"><a name="[G]_HELP_/_-Help">[G] HELP / -Help</a></p>
+				<p>This opens the online help file (RMS_Support_Tool.htm).</p>
 				<p class="Header3"><a name="[R]_RESET_/_-Reset_String">[R] RESET / -Reset &lt;String&gt;</a></p>
 				<p><strong>IMPORTANT: Before you proceed with this option, 
 				please close all open applications.</strong></p>
@@ -845,7 +963,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					<span lang="EN-US">
 					This is sufficient in most cases to reset
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
-				Microsoft® 365</a> desktop applications, while a complete reset 
+				Microsoft® 365</a> apps, while a complete reset 
 				is useful for all other applications.</span></li>
 					<li>If you want a complete reset, you must run the 
 					RMS_Support_Tool in an administrative PowerShell window as a 
@@ -861,7 +979,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				templates and settings:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; RMS_Support_Tool 
 				-Reset Default</span></p>
-				<p>All group policy settings are reapplied by "<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate">gpupdate 
+				<p>All group policy settings are reapplied by "<a class="Hyperlink" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate" target="_blank">gpupdate 
 				/force</a>", and the following registry keys are cleaned up:</p>
 				<p class="ConsoleListShadowTop">[HKCU:\SOFTWARE\Classes\Local 
 				Settings\Software\Microsoft\MSIPC]</p>
@@ -870,13 +988,11 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">
 				[HKCU:\SOFTWARE\Classes\Microsoft.IPViewerChildMenu]</p>
 				<p class="ConsoleListShadow">
-				[HKCU:\SOFTWARE\Microsoft\Office\14.0\Common\DRM]</p>
+				[HKCU:\SOFTWARE\Microsoft\Cloud\Office]</p>
 				<p class="ConsoleListShadow">
 				[HKCU:\SOFTWARE\Microsoft\Office\15.0\Common\DRM]</p>
 				<p class="ConsoleListShadow">
 				[HKCU:\SOFTWARE\Microsoft\Office\16.0\Common\DRM]</p>
-				<p class="ConsoleListShadow">
-				[HKCU:\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Common\DRM]</p>
 				<p class="ConsoleListShadow">
 				[HKCU:\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Common\DRM]</p>
 				<p class="ConsoleListShadow">
@@ -904,6 +1020,11 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">%LOCALAPPDATA%\Microsoft\MSIP</p>
 				<p class="ConsoleListShadow">%LOCALAPPDATA%\Microsoft\MSIPC</p>
 				<p class="ConsolteListShadowButton">%LOCALAPPDATA%\Microsoft\DRM</p>
+				<p>The
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/azureinformationprotection/Clear-AIPAuthentication?view=azureipps" target="_blank">Clear-AIPAuthentication</a> 
+				cmdlet is used to reset user settings, if an
+				<a class="Hyperlink" href="https://www.microsoft.com/en-us/download/details.aspx?id=53018">
+				Azure Information Protection client</a> installation is found.</p>
 				<p>When you run the RMS_Support_Tool in an administrative 
 				PowerShell window as a user with local administrative 
 				permissions, the following registry keys are cleaned up in addition:</p>
@@ -926,19 +1047,31 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				of the error:</p>
 				<p><span class="ConsoleTextShadow">PS C:\&gt; RMS_Support_Tool 
 				-Reset Silent -Verbose</span></p>
-				<p>You can also review the Script.log file for errors of silent 
+				<p>You can also review the 
+				<a class="Hyperlink" href="#Script_log_file">Script.log</a> file for errors of silent 
 				reset.&nbsp;&nbsp;</p>
 				<p>
 				<span class="Header3">
 				<a name="[P]_RECORD_PROBLEM_/_-RecordProblem">[P] RECORD PROBLEM / -RecordProblem</a></span></p>
 				<p><strong>IMPORTANT: Before you proceed with this option, 
 				please close all open applications.</strong></p>
+				<p><em>Note:</em></p>
+				<ul>
+					<li>When you run PowerShell with user permissions, 
+					neither CAPI2 or AIP event logs, network trace, nor filter 
+					drivers are recorded.</li>
+					<li>If you want a complete record, you must run the 
+					RMS_Support_Tool in an administrative PowerShell window as a 
+					user with local administrative permissions.</li>
+				</ul>
 				<p>In a first step, this parameter reset silent the client, then 
 				it activates the required logging, tracing or debugging 
 				mechanisms by implementing registry settings, and enabling some 
 				Windows event logs. This process will be reflected by a progress 
 				bar “Enable logging...".<br />
-				</p>
+				In the event that you accidentally close the PowerShell window 
+				while logging is enabled, the RMS_Support_Tool disables logging 
+				the next time you start it.</p>
 				<p>In a second step asks you to reproduce the problem. While 
 				you’re doing so, the RMS_Support_Tool collects and records data. 
 				Once you have reproduced the problem, all collected files will 
@@ -946,23 +1079,12 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				(%temp%\RMS_Support_Tool\Logs). Every time you call this option, 
 				a new unique subfolder will be created in the logs-folder that 
 				reflects the date and time when it was created, e.g. 
-				“200902-133005”. While the files are being cached, you will see 
+				“201013-133005”. While the files are being cached, you will see 
 				a progress bar “Collecting logs...".</p>
 				<p>In the last step, the RMS_Support_Tool resets all activated 
 				log, trace, and debug settings to their defaults. This process 
 				will be reflected by a progress bar “Disable logging...".</p>
 				<p>You can then review the log files in the logs folder.</p>
-				<p><em>Note:</em></p>
-				<ul>
-					<li>You must run the RMS_Support_Tool with administrative 
-					permissions to proceed this option. Please contact your 
-					administrator if necessary.</li>
-					<li>An additional tool from Windows® Sysinternals (<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" target="_blank">DebugView</a>) 
-					is required for logging. If you do not have this tool on 
-					your local hard drive, it will be automatically downloaded 
-					from the internet.</li>
-				</ul>
-				<p>&nbsp;</p>
 				<p class="Header3"><a name="[C]_COLLECT_/_-">[C] COLLECT / -</a></p>
 				<p>If you select this option, a submenu will be expanded, and 
 				you can collapse it by selecting option [C] COLLECT again:</p>
@@ -977,7 +1099,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
    			 &nbsp;&nbsp; ├──[A] AIP protection templates</p>
 				<p class="ConsoleListShadow">
 
-   			 &nbsp;&nbsp; └──[L] SCC labels and policies</p>
+   			 &nbsp;&nbsp; └──[L] MSC labels and policies</p>
 				<p class="ConsoleListShadow">
 
    			    &nbsp;</p>
@@ -1001,7 +1123,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					permissions to continue with this option. Please contact 
 					your administrator if necessary.</li>
 					<li>You need to know your 
-					<span lang="EN-US">
+				<span lang="EN-US">
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
 				Microsoft® 365</a></span> global administrator 
 					account information to proceed with this option, as you will 
@@ -1021,21 +1143,23 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					permissions to continue with this option. Please contact 
 					your administrator if necessary.</li>
 					<li>You need to know your 
-					<span lang="EN-US">
+				<span lang="EN-US">
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
 				Microsoft® 365</a></span> global administrator 
 					account information to proceed with this option, as you will 
 					be asked for your credentials.</li>
 				</ul>
 				<p class="Header3">
-				<a name="[L]_SCC_labels_and_policies_/_-CollectSCCLabelsAndPolicies">[L] 
-				SCC labels and policies / -CollectSCCLabelsAndPolicies</a></p>
+				<a name="[L]_MSC_labels_and_policies_/_-CollectMSCLabelsAndPolicies">[L] 
+				MSC labels and policies / -CollectMSCLabelsAndPolicies</a></p>
 				<p>This parameter collects the labels and policy definitions 
-				from your Microsoft® 365 Security &amp; Compliance Center (SCC). Those with 
+				from your 
+				<span lang="EN-US">
+				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
+				Microsoft® 365</a></span> Security Center (MSC). Those with 
 				protection and those with classification only.</p>
 				<p>Results are written into log file
-				<a class="Hyperlink" href="#SCCLabelsAndPolicies.log">
-				SCCLabelsAndPolicies.log</a> 
+				<a class="Hyperlink" href="#MSCLabelsAndPolicies.log">MSCLabelsAndPolicies.log</a> 
 				in the subfolder "Collect" of the Logs folder.</p>
 				<p><em>Note:</em></p>
 				<ul>
@@ -1044,7 +1168,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					permissions to continue with this option. Please contact 
 					your administrator if necessary.</li>
 					<li>You need to know your 
-					<span lang="EN-US">
+				<span lang="EN-US">
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
 				Microsoft® 365</a></span> 
 					global administrator account information to proceed with 
@@ -1077,9 +1201,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					administrative permissions to continue with option 
 					<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
 					Endpoint URLs</a>, if the corresponding 
-					<span lang="EN-US">
+				<span lang="EN-US">
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
-				Microsoft® 365</a></span> desktop application is not bootstraped. Please 
+				Microsoft® 365</a></span> app is not bootstraped. Please 
 					contact your administrator if necessary.</li>
 				</ul>
 				<p class="Header3">
@@ -1088,8 +1212,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				The URLs are taken from your local registry or your tenant's AIP service configuration 
 				information, and extended by additional relevant URLs.</p>
 				<p>In a first step, this parameter is used to check whether you 
-				can access the URL.<br />
-				</p>
+				can access the URL.</p>
 				<p>In a second step, the issuer of the corresponding certificate 
 				of the URL is validated. </p>
 				<p>This process is represented by an output with the Tenant Id, 
@@ -1122,7 +1245,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					permissions to continue with this option, if the corresponding 
 					<span lang="EN-US">
 				<a class="Hyperlink" href="https://www.microsoft.com/en-us/microsoft-365" target="_blank">
-				Microsoft® 365</a></span> desktop application is not bootstraped. Please 
+				Microsoft® 365</a></span> app is not bootstraped. Please 
 					contact your administrator if necessary.</li>
 					<li>You need to know your 
 					<span lang="EN-US">
@@ -1158,9 +1281,11 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					the requirements section of this help file.</li>
 				</ul>
 				<p class="Header3"><a name="[Z]_COMPRESS_LOGS_/_-CompressLogs">[Z] COMPRESS LOGS / -CompressLogs</a></p>
-				<p>
-				<strong>IMPORTANT: This command line parameter should always be 
-				used at the very end of a scenario.</strong></p>
+				<p>This command line parameter should always be used at the very 
+				end of a scenario.</p>
+				<p><strong>IMPORTANT: Do not modify or delete any of the resulting trace files, as 
+					this will result in incorrect information when analyzing 
+					your environment.</strong></p>
 				<p>
 				This parameter compresses all collected log files and folders 
 				into a .zip archive, and the corresponding file is saved to your 
@@ -1168,9 +1293,9 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				(%temp%\RMS_Support_Tool\Logs) is cleaned.</p>
 				<p>
 				After this step you can send/upload the 
-				.zip file for the Microsoft® support technician.&nbsp;</p>
+				.zip file for the Microsoft® support engineer.&nbsp;</p>
 				<p>
-				<span class="Header3">[X] EXIT / -</span></p>
+				<span class="Header3"><a name="[X]_EXIT_/_-">[X] EXIT / -</a></span></p>
 				<p>This option will asks you whether you want to exit the menu after a confirmation prompt.</p>
 				<p class="Header3"><a name="-_/_-CheckForUpdate">- / -CheckForUpdate</a></p>
 				<p>This parameter checks if a new version is available for 
@@ -1220,9 +1345,10 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Header3">RECORD PROBLEM</p>
 				<p>Log files and folders collected by the
 				<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
-				RECORD PROBLEM</a> option:</p>
+				RECORD PROBLEM</a> option when you run the RMS_Support_Tool with 
+				user permissions:</p>
 				<ul>
-					<li><a name="ServiceLocationBackup.reg0" class="Header4">ServiceLocationBackup.reg</a><br />
+					<li><a class="Header4" name="ServiceLocationBackup.reg">ServiceLocationBackup.reg</a><br />
 					<br />
 					This file is created by the
 				<a class="Hyperlink" href="#[R]_RESET_/_-Reset_String">RESET</a> 
@@ -1277,8 +1403,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				documentation:
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/dotnet/framework/network-programming/automatic-proxy-detection" target="_blank">
 				Automatic Proxy Detection</a>, and
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/auto-proxy-configuration-settings-for-ie11">
-				Auto proxy configuration settings for Internet Explorer 11</a>.</p>
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/auto-proxy-configuration-settings-for-ie11" target="_blank">Auto proxy configuration settings for Internet Explorer 11</a>.</p>
 				<ul>
 					<li>
 					<p class="Header4">ProblemSteps.zip</p>
@@ -1288,21 +1413,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				occured. It was created by the Steps Recorder (psr.exe). </p>
 				<p class="Logs-Text">For 
 				more information, please see the following documentation:
-				<a class="Hyperlink" href="https://support.microsoft.com/en-us/help/22878/windows-10-record-steps" rel="nofollow" target="_blank">Record steps to reproduce a problem</a>.&nbsp;</p>
-				<ul>
-					<li>
-					<p class="Header4">MSIPC-DebugView.log</p>
-					</li>
-				</ul>
-				<p class="Logs-Text">This file contains debug output for all MSIPC- 
-				and 
-				MSDRM-clients on your local system. It was created by 
-				DebugView.exe. For more information, please see the following 
-				documentation:
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/sysinternals/downloads/debugview" rel="nofollow" target="_blank">
-				DebugView</a>.</p>
-				<p class="Logs-Text">For more information, please see the following documentation:
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/azure/information-protection/develop/debugging-applications-that-use-ad-rms" rel="nofollow" target="_blank">How-to: debug a rights-enabled application</a>.&nbsp;</p>
+				<a class="Hyperlink" href="https://support.microsoft.com/en-us/help/22878/windows-10-record-steps" rel="nofollow" target="_blank">Record steps to reproduce a problem</a>.</p>
 				<ul>
 					<li>
 					<p class="Header4">MSIPC/MSIP folders / AIPLogs.zip</p>
@@ -1360,37 +1471,14 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Logs-Text">An Office log file collected from the users 
 				temp folder. For example:</p>
 				<p><span class="Logs-ConsoleTextShadow">
-				%TEMP%\MACHINENAME-20200713-133005.log</span></p>
+				%TEMP%\MACHINENAME-20201013-133005.log</span></p>
 				<p class="Logs-Text">The log file name reflects the compuer 
 				name, and date and time when the log was created, e.g. 
-				“20071013-133005”. </p>
+				“20201013-133005”. </p>
 				<p class="Logs-Text">For more information, please see the following documentation:
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging">
-				How to enable Microsoft 365 Apps for enterprise ULS logging</a> 
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging" target="_blank">How to enable Microsoft 365 Apps for enterprise ULS logging</a> 
 				(part "For sign-in or activation issues, add the following 
-				registry key").</p>
-				<ul>
-					<li>
-					<p class="Header4">Office Diagnostics logging</p>
-					</li>
-				</ul>
-				<p class="Logs-Text">Office Diagnostics log files collected from 
-				the users temp folder:</p>
-				<p><span class="Logs-ConsoleTextShadow">
-				%TEMP%\Diagnostics<br />
-				</span></p>
-				<ul>
-					<li>
-					<p class="Header4">MSOIdentityCRL trace</p>
-					</li>
-				</ul>
-				<p class="Logs-Text">Microsoft® Online Services Sign-in Assistant (MOS SIA) trace, 
-				and logs from MSOTrace-, and MSOTraceLite-folders.</p>
-				<p class="Logs-Text">For more 
-				information, please see the following documentation:
-				<a class="Hyperlink" href="https://support.microsoft.com/en-us/help/2433327/how-to-enable-and-disable-a-trace-for-the-microsoft-online-services-si" rel="nofollow" target="_blank">How to enable and disable a trace for the 
-				Microsoft® Online 
-				Services Sign-in Assistant</a>.&nbsp;</p>
+				registry key").&nbsp;</p>
 				<ul>
 					<li>
 					<p class="Header4">CertMachine.log and CertUser.log</p>
@@ -1444,8 +1532,6 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Logs-ConsoleListShadow">
 				[HKLM:\Software\Classes\AllFileSystemObjects\shell\Microsoft.Azip.RightClick]</p>
 				<p class="Logs-ConsoleListShadow">[HKLM:\Software\Microsoft\MSIPC]</p>
-				<p class="Logs-ConsoleListShadow">[HKLM:\Software\Microsoft\Office\16.0\Common\DRM]</p>
-				<p class="Logs-ConsoleListShadow">[HKLM:\Software\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\DRM]</p>
 				<p class="Logs-ConsoleListShadow">
 				[HKLM:\Software\Microsoft\Office\Word\Addins]</p>
 				<p class="Logs-ConsoleListShadow">
@@ -1506,7 +1592,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Logs-ConsoleListShadow">[HKCR:\MSIP.PowerPointAddin]</p>
 				<p class="Logs-ConsoleListShadow">[HKCR:\MSIP.OutlookAddin]</p>
 				<p class="Logs-ConsolteListShadowButton">[HKCR:\Local 
-				Settings\Software\Microsoft\MSIPC]&nbsp;</p>
+				Settings\Software\Microsoft\MSIPC]</p>
 				<ul>
 					<li>
 					<p class="Header4ParagraphSpaceBefore">Gpresult.htm</p>
@@ -1527,6 +1613,10 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				information about this PowerShell command, please see the 
 				following documentation:
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-timezone?view=powershell-5.1" rel="nofollow" target="_blank">Get-TimeZone</a>.</p>
+				<p>Log files and folders additionally collected by the
+				<a class="Hyperlink" href="#[P]_RECORD_PROBLEM_/_-RecordProblem">
+				RECORD PROBLEM</a> option when you run the RMS_Support_Tool with 
+				administrative permissions:&nbsp;</p>
 				<ul>
 					<li>
 					<p class="Header4">CAPI2.evtx</p>
@@ -1567,7 +1657,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>Log files and folders collected via the sub-entries of the
 				<a class="Hyperlink" href="#[C]_COLLECT_/_-">COLLECT</a> menu.<br />
 				Results are written in the subfolder "Collect" of the Logs 
-				folder:&nbsp;</p>
+				folder:</p>
 				<ul>
 					<li>
 					<p class="Header4">
@@ -1599,13 +1689,13 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/aipservice/get-aipservicetemplate" rel="nofollow" target="_blank">Get-AipServiceTemplate</a>.</p>
 				<ul>
 					<li>
-					<p class="Header4"><a name="SCCLabelsAndPolicies.log">SCCLabelsAndPolicies.log</a></p>
+					<p class="Header4"><a name="MSCLabelsAndPolicies.log">MSCLabelsAndPolicies.log</a></p>
 					</li>
 				</ul>
 				<p class="Logs-Text">This file is created by the
 				collect option
-				<a class="Hyperlink" href="#[L]_SCC_labels_and_policies_/_-CollectSCCLabelsAndPolicies">
-				SCC labels and policies</a>.</p>
+				<a class="Hyperlink" href="#[L]_MSC_labels_and_policies_/_-CollectMSCLabelsAndPolicies">
+				MSC labels and policies</a>.</p>
 				<p class="Logs-Text">For more information, please see the following documentation:
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/module/exchange/policy-and-compliance/get-label?view=exchange-ps" target="_blank">
 				Get-Label</a> and
@@ -1615,7 +1705,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>Log files and folders collected via the sub-entries of the
 				<a class="Hyperlink" href="#[Y]_ANALYZE_/_-">ANALYZE</a> menu.<br />
 				Results are written in the subfolder "Analyze" of the Logs 
-				folder:&nbsp;</p>
+				folder:</p>
 				<ul>
 					<li>
 					<p class="Header4"><a name="EndpointURLs.log">EndpointURLs.log</a></p>
@@ -1629,7 +1719,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<ul>
 					<li><span class="Header4">.cer-files (.ce_)</span><br />
 					<br />
-					These files are created by the option
+					These files are created by the analyze option
 				<a class="Hyperlink" href="#[U]_Endpoint_URLs_/_-AnalyzeEndpointURLs">
 				Endpoint URLs.</a><br />
 					<br />
@@ -1682,7 +1772,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 
 <div class="HeaderBackground" style="height: 135px">
 	<br />
-        <div style="border-left: 1px solid lightgray; border-right: 0px solid lightgray; border-top: 0px solid lightgray; border-bottom: 0px solid lightgray; padding: 0px 20px; width:950px; margin:auto; background-color:#282828; height: 48px;">
+        <div style="border-left: 1px solid lightgray; border-right: 0px solid lightgray; border-top: 0px solid lightgray; border-bottom: 0px solid lightgray; padding: 0px 20px; width:950px; margin:auto; background-color:#2b579a; height: 48px;">
 
             <div class="PageSize" style="width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12pt; height: 61px;">
 				
