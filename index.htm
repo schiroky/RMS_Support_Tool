@@ -6,10 +6,10 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="2.0.1" http-equiv="VERSION" />
-<meta content="25/11/2020" http-equiv="CREATEDATE" />
+<meta content="09/02/2021" http-equiv="CREATEDATE" />
 <meta content="Claus Schiroky" http-equiv="AUTHOR" />
 <meta content="https://aka.ms/RMS_Support_Tool/Latest" http-equiv="SOURCE" />
-<meta content="Copyright ©2020 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
+<meta content="Copyright ©2021 by Microsoft®. All rights reserved." http-equiv="COPYRIGHT" />
 
 <title>RMS Support Tool</title>
 
@@ -255,7 +255,7 @@
 				<span style='line-height:115%;
   color:white;' class="auto-style7">
 				<span class="HeaderSubtitle">
-				Version 2.0.0</span></span></p>
+				Version 2.0.1</span></span></p>
 
 
             </div>
@@ -710,7 +710,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p>To install the RMS_Support_Tool manually, you must create the 
 				following folder, and copy/paste all the RMS_Support_Tool files (RMS_Support_Tool.psm1, RMS_Support_Tool.psd1, and RMS_Support_Tool.htm) 
 				into this folder:</p>
-				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\2.0.0</span></p>
+				<p><span class="ConsoleTextShadow">%USERPROFILE%\Documents\WindowsPowerShell\Modules\RMS_Support_Tool\2.0.1</span></p>
 				<p>This path must be listed in the PSModulePath environment 
 					variable. For more information, please read how
 					<a class="Hyperlink" href="https://docs.microsoft.com/en-us/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path?view=powershell-5.1#to-view-the-psmodulepath-variable" rel="nofollow" target="_blank">to view the PSModulePath variable</a>.</p>
@@ -777,7 +777,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">----------&nbsp;&nbsp; -------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------------</p>
 				<p class="ConsolteListShadowButton">Script&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-				2.0.0&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				2.0.1&nbsp;&nbsp;&nbsp;&nbsp; RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool</p>
 				<p>To verify that an installation was performed using PowerShell 
 				Gallery, you can run the following command:</p>
@@ -794,7 +794,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsoleListShadow">-------&nbsp;&nbsp;&nbsp;&nbsp; 
 				----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				----------&nbsp;&nbsp;&nbsp;&nbsp; -----------</p>
-				<p class="ConsolteListShadowButton">2.0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<p class="ConsolteListShadowButton">2.0.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				RMS_Support_Tool&nbsp;&nbsp;&nbsp;&nbsp; PSGallery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				The 'RMS Support Tool' provides the functionality to reset...</p>
 				<p>&nbsp;</p>
@@ -1007,7 +1007,10 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="ConsolteListShadowButton">
 				[HKCR:\AllFilesystemObjects\shell\Microsoft.Azip.RightClick]</p>
 				<p>The
-				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options" target="_blank">DRMEncryptProperty</a> registry setting is purged of the 
+				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/deployoffice/security/protect-sensitive-messages-and-documents-by-using-irm-in-office#office-2016-irm-registry-key-options" target="_blank">DRMEncryptProperty</a> 
+				and
+				<a class="Hyperlink" href="https://admx.help/?Category=Office2013&amp;Policy=office15.Office.Microsoft.Policies.Windows::L_Protectdocumentmetadataforpasswordprotected" target="_blank">
+				OpenXMLEncryptProperty</a> registry setting are purged of the 
 				following keys:</p>
 				<p class="ConsoleListShadowTop">
 				[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Security]</p>
@@ -1064,7 +1067,8 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 					RMS_Support_Tool in an administrative PowerShell window as a 
 					user with local administrative permissions.</li>
 				</ul>
-				<p>In a first step, this parameter reset silent the client, then 
+				<p>As a first step, this parameter cleans up existing MSIP/MSIPC 
+				log folders, then 
 				it activates the required logging, tracing or debugging 
 				mechanisms by implementing registry settings, and enabling some 
 				Windows event logs. This process will be reflected by a progress 
@@ -1079,7 +1083,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				(%temp%\RMS_Support_Tool\Logs). Every time you call this option, 
 				a new unique subfolder will be created in the logs-folder that 
 				reflects the date and time when it was created, e.g. 
-				“201013-133005”. While the files are being cached, you will see 
+				“210209-133005”. While the files are being cached, you will see 
 				a progress bar “Collecting logs...".</p>
 				<p>In the last step, the RMS_Support_Tool resets all activated 
 				log, trace, and debug settings to their defaults. This process 
@@ -1471,10 +1475,10 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
 				<p class="Logs-Text">An Office log file collected from the users 
 				temp folder. For example:</p>
 				<p><span class="Logs-ConsoleTextShadow">
-				%TEMP%\MACHINENAME-20201013-133005.log</span></p>
+				%TEMP%\MACHINENAME-20210209-133005.log</span></p>
 				<p class="Logs-Text">The log file name reflects the compuer 
 				name, and date and time when the log was created, e.g. 
-				“20201013-133005”. </p>
+				“210209-133005”. </p>
 				<p class="Logs-Text">For more information, please see the following documentation:
 				<a class="Hyperlink" href="https://docs.microsoft.com/en-us/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging" target="_blank">How to enable Microsoft 365 Apps for enterprise ULS logging</a> 
 				(part "For sign-in or activation issues, add the following 
@@ -1785,7 +1789,7 @@ width="197" height="41" alt="Microsoft" longdesc="Microsoft" style="float: right
   color:white;' class="auto-style7"><br />
 				</span>
 				<span style='line-height:115%;
-  color:white;' class="auto-style7">Copyright ©2020 Microsoft</span><span style='line-height:115%;
+  color:white;' class="auto-style7">Copyright ©2021 Microsoft</span><span style='line-height:115%;
   color:white;' class="auto-style10">®. All rights reserved.</span></p>
 
 
