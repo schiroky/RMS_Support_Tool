@@ -1,5 +1,7 @@
 # RMS Support Tool
 
-Please note that the RMS_Support_Tool has moved to the [Microsoft organization repository](https://github.com/microsoft/RMS_Support_Tool).
+*Please note:*
+
+The [RMS_Support_Tool](https://aka.ms/rms_support_tool) became a [Microsoft Open Source](https://opensource.microsoft.com) project and moved to the [Microsoft organization repository](https://github.com/microsoft/RMS_Support_Tool).
 
 Copyright© 2021 by Microsoft®. All rights reserved.
