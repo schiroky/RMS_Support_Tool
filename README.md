@@ -2,4 +2,4 @@
 
 > **Note**
 > 
-> The 'RMS_Support_Tool' has been retired and replaced by the [Compliance Utility](https://github.com/microsoft/ComplianceUtility/tree/main).
+> The 'RMS_Support_Tool' has been retired and replaced by the [Compliance Utility](https://aka.ms/ComplianceUtility).
